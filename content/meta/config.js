@@ -1,23 +1,23 @@
 module.exports = {
-  siteTitle: "HeroBlog - a GatsbyJS starter", // <title>
-  shortSiteTitle: "HeroBlog - GatsbyJS starter", // <title> ending for posts and pages
-  siteDescription: "HeroBlog is a GatsbyJS starter.",
+  siteTitle: "LaAsistenteCR - recomendaciones y sugerencias para tus viajes", // <title>
+  shortSiteTitle: "LaAsistenteCR - un Asistente de Viajes", // <title> ending for posts and pages
+  siteDescription: "Blog de viajes y ocio.",
   siteUrl: "https://gatsby-starter-hero-blog.greglobinski.com",
   // pathPrefix: "",
   siteImage: "preview.jpg",
   siteLanguage: "en",
 
   /* author */
-  authorName: "greg lobinski",
-  authorTwitterAccount: "greglobinski",
+  authorName: "fabi zuniga",
+  authorTwitterAccount: "fabi.zuniga",
 
   /* info */
-  headerTitle: "greg lobinski",
-  headerSubTitle: "presents another one GatsbyJS starter",
+  headerTitle: "laasistentecr",
+  headerSubTitle: "recomendaciones y sugerencias para tus viajes",
 
   /* manifest.json */
-  manifestName: "HeroBlog - a GatsbyJS starter",
-  manifestShortName: "HeroBlog", // max 12 characters
+  manifestName: "AsistenteCR - un Asistente de Viajes",
+  manifestShortName: "AsistenteCR", // max 12 characters
   manifestStartUrl: "/index.html",
   manifestBackgroundColor: "white",
   manifestThemeColor: "#666",
@@ -32,8 +32,8 @@ module.exports = {
 
   // social
   authorSocialLinks: [
-    { name: "github", url: "https://github.com/greglobinski" },
-    { name: "twitter", url: "https://twitter.com/greglobinski" },
-    { name: "facebook", url: "http://facebook.com/greglobinski" }
+    { name: "instagram", url: "https://instagram.com/laasistentecr" },
+    { name: "twitter", url: "https://twitter.com/laasistentecr" },
+    { name: "facebook", url: "https://www.facebook.com/laasistentecr" }
   ]
 };
