@@ -3,19 +3,29 @@ import PropTypes from "prop-types";
 import { Link } from "gatsby";
 
 const Item = props => {
-  const { theme, item: { label, to, icon: Icon } = {}, onClick } = props;
+  const { theme, item: { label, to, action, icon: Icon } = {}, onClick } = props;
 
   return (
     <React.Fragment>
       <li className={"hiddenItem" in props ? "hiddenItem" : "item"} key={label}>
-        <Link
-          to={to}
-          className={"hiddenItem" in props ? "inHiddenItem" : ""}
-          onClick={onClick}
-          data-slug={to}
-        >
-          {Icon && <Icon />} {label}
-        </Link>
+        {action ? (
+          <a
+            className={"hiddenItem" in props ? "inHiddenItem" : ""}
+            onClick={action}
+            data-slug={to}
+          >
+            {Icon && <Icon />} {label}
+          </a>
+        ) : (
+          <Link
+            to={to}
+            className={"hiddenItem" in props ? "inHiddenItem" : ""}
+            onClick={onClick}
+            data-slug={to}
+          >
+            {Icon && <Icon />} {label}
+          </Link>
+        )}
       </li>
 
       {/* --- STYLES --- */}
@@ -31,6 +41,7 @@ const Item = props => {
             padding: ${theme.space.inset.s};
             display: flex;
             align-items: center;
+            cursor: pointer;
           }
 
           :global(svg) {
