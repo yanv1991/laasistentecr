@@ -35,6 +35,7 @@ const SubscribeForm = ({ handleSubmit, handleChange, email }) => {
         .subscribeForm {
           display: flex;
           align-items: center;
+          justify-content: center;
           @media (max-width: 500px) {
             -ms-flex-direction: column;
             flex-direction: column;
@@ -42,7 +43,7 @@ const SubscribeForm = ({ handleSubmit, handleChange, email }) => {
         }
 
         & > :global(.formGroup) {
-          flex-grow: 1;
+          max-width: 36rem;
           @media (max-width: 500px) {
             width: 100%;
           }
@@ -56,7 +57,7 @@ const SubscribeForm = ({ handleSubmit, handleChange, email }) => {
             line-height: 1em;
             font-weight: normal;
             user-select: text;
-            border-radius: 5px;
+            border-radius: 8px;
             transition: border-color 0.15s linear;
 
             -webkit-appearance: none;
@@ -68,6 +69,8 @@ const SubscribeForm = ({ handleSubmit, handleChange, email }) => {
         }
 
         & > :global(.button) {
+          max-width: 12.5rem;
+          min-height: 3.7rem;
           display: inline-block;
           margin: 0 0 0 10px;
           padding: 0 20px;
