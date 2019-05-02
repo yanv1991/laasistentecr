@@ -12,7 +12,7 @@ import Menu from "../Menu";
 import Overlay from "../Overlay";
 import SubscribeForm from "../SubscribeForm";
 
-import avatar from "../../images/jpg/avatar.jpg";
+import avatar from "../../images/jpg/avatar.png";
 
 class Header extends React.Component {
   state = {
