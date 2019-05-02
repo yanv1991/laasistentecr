@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import React, { Fragment } from "react";
 import VisibilitySensor from "react-visibility-sensor";
 import addToMailchimp from "gatsby-plugin-mailchimp";
+import { NotificationManager } from "react-notifications";
+import { FacebookIcon } from "react-share";
 
 import { ScreenWidthContext, FontLoadedContext } from "../../layouts";
 import config from "../../../content/meta/config";
@@ -52,22 +54,29 @@ class Header extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    console.log("submit", this.state);
-
     addToMailchimp(this.state.email, this.state)
       .then(({ msg, result }) => {
-        console.log("msg", `${result}: ${msg}`);
-
         if (result !== "success") {
           throw msg;
         }
-        alert(msg);
+        this.handleOnClick();
+
+        NotificationManager.success("Success message", "Title here");
       })
       .catch(err => {
         console.log("err", err);
-        alert(err);
       });
   };
+
+  componentDidUpdate() {
+    const body = document.body;
+
+    if (this.state.isModalOpen) {
+      body.classList.add("modalOpen");
+    } else {
+      body.classList.remove("modalOpen");
+    }
+  }
 
   render() {
     const { pages, path, theme } = this.props;
@@ -102,7 +111,13 @@ class Header extends React.Component {
                       theme={theme}
                       handleClickSubscription={this.handleOnClick}
                     />
-                    {/**<SubscribeButton onClick={this.handleOnClick} /> */}
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://www.facebook.com/laasistentecr/"
+                    >
+                      <FacebookIcon round size={25} />
+                    </a>
                   </Fragment>
                 )}
               </ScreenWidthContext.Consumer>

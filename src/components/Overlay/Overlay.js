@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import addToMailchimp from "gatsby-plugin-mailchimp";
 
 const Overlay = props => {
-  const { html, theme, open, children, onClose } = props;
+  const { open, children, onClose } = props;
 
   return (
     <React.Fragment>
@@ -83,10 +82,8 @@ const Overlay = props => {
 };
 
 Overlay.propTypes = {
-  html: PropTypes.string,
-  theme: PropTypes.object.isRequired,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
-  open: PropTypes.boolean,
+  open: PropTypes.bool,
   onClose: PropTypes.func
 };
 

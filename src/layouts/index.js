@@ -3,6 +3,7 @@ import FontFaceObserver from "fontfaceobserver";
 import PropTypes from "prop-types";
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
+import { NotificationContainer } from "react-notifications";
 
 import { getScreenWidth, timeoutThrottlerHandler } from "../utils/helpers";
 import Footer from "../components/Footer/";
@@ -115,6 +116,7 @@ class Layout extends React.Component {
               <FontLoadedContext.Provider value={this.state.font400loaded}>
                 <ScreenWidthContext.Provider value={this.state.screenWidth}>
                   <React.Fragment>
+                    <NotificationContainer />
                     <Header
                       path={this.props.location.pathname}
                       pages={pages}
@@ -144,6 +146,9 @@ class Layout extends React.Component {
                         font-family: ${this.state.font400loaded
                           ? "'Open Sans', sans-serif;"
                           : "Arial, sans-serif;"};
+                      }
+                      .modalOpen {
+                        overflow: hidden;
                       }
                       h1,
                       h2,
