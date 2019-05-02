@@ -1,17 +1,24 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
-import React from "react";
+import React, { Fragment } from "react";
 import VisibilitySensor from "react-visibility-sensor";
+import addToMailchimp from "gatsby-plugin-mailchimp";
+import { NotificationManager } from "react-notifications";
+import { FacebookIcon } from "react-share";
 
 import { ScreenWidthContext, FontLoadedContext } from "../../layouts";
 import config from "../../../content/meta/config";
 import Menu from "../Menu";
+import Overlay from "../Overlay";
+import SubscribeForm from "../SubscribeForm";
 
 import avatar from "../../images/jpg/avatar.jpg";
 
 class Header extends React.Component {
   state = {
-    fixed: false
+    fixed: false,
+    isModalOpen: false,
+    email: ""
   };
 
   visibilitySensorChange = val => {
@@ -29,16 +36,61 @@ class Header extends React.Component {
     return `${fixed} ${homepage}`;
   };
 
+  handleOnClick = () => {
+    this.setState(prevState => {
+      return { ...prevState, isModalOpen: !prevState.isModalOpen };
+    });
+  };
+
+  handleChange = e => {
+    console.log({
+      [`${e.target.name}`]: e.target.value
+    });
+    this.setState({
+      [`${e.target.name}`]: e.target.value
+    });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+
+    addToMailchimp(this.state.email, this.state)
+      .then(({ msg, result }) => {
+        if (result !== "success") {
+          throw msg;
+        }
+        this.handleOnClick();
+
+        NotificationManager.success("Success message", "Title here");
+      })
+      .catch(err => {
+        console.log("err", err);
+      });
+  };
+
+  componentDidUpdate() {
+    const body = document.body;
+
+    if (this.state.isModalOpen) {
+      body.classList.add("modalOpen");
+    } else {
+      body.classList.remove("modalOpen");
+    }
+  }
+
   render() {
     const { pages, path, theme } = this.props;
-    const { fixed } = this.state;
+    const { fixed, isModalOpen, email } = this.state;
 
     return (
       <React.Fragment>
         <header className={`header ${this.getHeaderSize()}`}>
           <Link to="/" className="logoType">
             <div className="logo">
-              <img src={config.gravatarImgMd5=="" ? avatar : config.gravatarImgMd5 } alt={config.siteTitle} />
+              <img
+                src={config.gravatarImgMd5 == "" ? avatar : config.gravatarImgMd5}
+                alt={config.siteTitle}
+              />
             </div>
             <div className="type">
               <h1>{config.headerTitle}</h1>
@@ -49,18 +101,46 @@ class Header extends React.Component {
             {loaded => (
               <ScreenWidthContext.Consumer>
                 {width => (
-                  <Menu
-                    path={path}
-                    fixed={fixed}
-                    screenWidth={width}
-                    fontLoaded={loaded}
-                    pages={pages}
-                    theme={theme}
-                  />
+                  <Fragment>
+                    <Menu
+                      path={path}
+                      fixed={fixed}
+                      screenWidth={width}
+                      fontLoaded={loaded}
+                      pages={pages}
+                      theme={theme}
+                      handleClickSubscription={this.handleOnClick}
+                    />
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://www.facebook.com/laasistentecr/"
+                    >
+                      <FacebookIcon round size={25} />
+                    </a>
+                  </Fragment>
                 )}
               </ScreenWidthContext.Consumer>
             )}
           </FontLoadedContext.Consumer>
+          <Overlay open={isModalOpen} onClose={this.handleOnClick}>
+            <div className="logo logoOverlay">
+              <img
+                src={config.gravatarImgMd5 == "" ? avatar : config.gravatarImgMd5}
+                alt={config.siteTitle}
+              />
+            </div>
+            <h1 className="title">Subscribe to {config.headerTitle}</h1>
+            <p className="description">
+              Stay up to date! Get all the latest &amp; greatest posts delivered straight to your
+              inbox
+            </p>
+            <SubscribeForm
+              handleSubmit={this.handleSubmit}
+              handleChange={this.handleChange}
+              value={email}
+            />
+          </Overlay>
         </header>
         <VisibilitySensor onChange={this.visibilitySensorChange}>
           <div className="sensor" />
@@ -120,6 +200,12 @@ class Header extends React.Component {
             width: 44px;
             transition: all 0.5s;
 
+            &.logoOverlay {
+              position: fixed;
+              top: 23px;
+              left: 30px;
+            }
+
             .homepage & {
               height: 60px;
               width: 60px;
@@ -128,6 +214,22 @@ class Header extends React.Component {
             img {
               width: 100%;
             }
+          }
+
+          .title {
+            display: inline-block;
+            margin: 0 0 10px 0;
+            font-size: 4rem;
+            line-height: 1.15em;
+          }
+
+          .description {
+            margin: 0 auto 50px;
+            max-width: 650px;
+            font-size: 2rem;
+            line-height: 1.3em;
+            font-weight: 300;
+            opacity: 0.8;
           }
 
           .sensor {

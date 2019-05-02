@@ -2,16 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import {
   FacebookShareButton,
-  GooglePlusShareButton,
-  LinkedinShareButton,
   TwitterShareButton,
   FacebookShareCount,
-  GooglePlusShareCount,
-  LinkedinShareCount,
   FacebookIcon,
-  TwitterIcon,
-  GooglePlusIcon,
-  LinkedinIcon
+  TwitterIcon
 } from "react-share";
 
 import config from "../../../content/meta/config";
@@ -19,9 +13,9 @@ import config from "../../../content/meta/config";
 const PostShare = props => {
   const {
     post: {
-      fields: { slug },
-      frontmatter: { title },
-      excerpt
+      fields: { slug = "" },
+      frontmatter: { title = "" },
+      excerpt = ""
     },
     theme
   } = props;
@@ -45,20 +39,9 @@ const PostShare = props => {
           >
             <TwitterIcon round size={iconSize} />
           </TwitterShareButton>
-          <GooglePlusShareButton
-            url={url}
-            additionalProps={{
-              "aria-label": "Google share"
-            }}
-          >
-            <GooglePlusIcon round size={iconSize} />
-            <GooglePlusShareCount url={url}>
-              {count => <div className="share-count">{filter(count)}</div>}
-            </GooglePlusShareCount>
-          </GooglePlusShareButton>
           <FacebookShareButton
             url={url}
-            quote={`${title} - ${excerpt}`}
+            quote={excerpt ? `${title} - ${excerpt}` : `${title}`}
             additionalProps={{
               "aria-label": "Facebook share"
             }}
@@ -68,19 +51,6 @@ const PostShare = props => {
               {count => <div className="share-count">{filter(count)}</div>}
             </FacebookShareCount>
           </FacebookShareButton>
-          <LinkedinShareButton
-            url={url}
-            title={title}
-            description={excerpt}
-            additionalProps={{
-              "aria-label": "LinkedIn share"
-            }}
-          >
-            <LinkedinIcon round size={iconSize} />
-            <LinkedinShareCount url={url}>
-              {count => <div className="share-count">{filter(count)}</div>}
-            </LinkedinShareCount>
-          </LinkedinShareButton>
         </div>
       </div>
 

@@ -269,6 +269,19 @@ module.exports = {
       options: {
         include: /svg-icons/
       }
+    },
+    {
+      resolve: "gatsby-plugin-google-fonts",
+      options: {
+        fonts: ["material icons", "roboto:300,400,500,700"]
+      }
+    },
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://gmail.us20.list-manage.com/subscribe/post?u=45518dc629d031fe22c96f13d&amp;id=a6ca913ef6" // see instructions section below
+      }
     }
   ]
 };
