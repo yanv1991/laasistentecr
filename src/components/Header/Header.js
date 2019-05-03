@@ -12,7 +12,7 @@ import Menu from "../Menu";
 import Overlay from "../Overlay";
 import SubscribeForm from "../SubscribeForm";
 
-import avatar from "../../images/jpg/avatar.jpg";
+import avatar from "../../images/jpg/avatar.png";
 
 class Header extends React.Component {
   state = {
@@ -116,7 +116,7 @@ class Header extends React.Component {
                       rel="noopener noreferrer"
                       href="https://www.facebook.com/laasistentecr/"
                     >
-                      <FacebookIcon round size={25} />
+                      {width >= 1024 && <FacebookIcon round size={25} />}
                     </a>
                   </Fragment>
                 )}
@@ -124,12 +124,14 @@ class Header extends React.Component {
             )}
           </FontLoadedContext.Consumer>
           <Overlay open={isModalOpen} onClose={this.handleOnClick}>
-            <div className="logo logoOverlay">
-              <img
-                src={config.gravatarImgMd5 == "" ? avatar : config.gravatarImgMd5}
-                alt={config.siteTitle}
-              />
-            </div>
+            {/*
+              <div className="logo logoOverlay">
+                <img
+                  src={config.gravatarImgMd5 == "" ? avatar : config.gravatarImgMd5}
+                  alt={config.siteTitle}
+                />
+              </div>
+              */}
             <h1 className="title">Subscribe to {config.headerTitle}</h1>
             <p className="description">
               Stay up to date! Get all the latest &amp; greatest posts delivered straight to your
@@ -167,6 +169,7 @@ class Header extends React.Component {
 
               .logo {
                 flex-shrink: 0;
+                background-color: white;
               }
             }
 
@@ -191,11 +194,11 @@ class Header extends React.Component {
           }
 
           .logo {
-            border-radius: 65% 75%;
+            border-radius: 75% 75%;
             border: 1px solid #eee;
             display: inline-block;
             height: 44px;
-            margin: ${theme.space.inline.default};
+            margin: 0 20px;
             overflow: hidden;
             width: 44px;
             transition: all 0.5s;
@@ -219,17 +222,27 @@ class Header extends React.Component {
           .title {
             display: inline-block;
             margin: 0 0 10px 0;
-            font-size: 4rem;
+            font-size: 3rem;
             line-height: 1.15em;
           }
 
           .description {
             margin: 0 auto 50px;
             max-width: 650px;
-            font-size: 2rem;
+            font-size: 1.5rem;
             line-height: 1.3em;
             font-weight: 300;
             opacity: 0.8;
+          }
+
+          @from-width tablet {
+            .title {
+              fon-size: 4rem;
+            }
+
+            .description {
+              font-size: 2rem;
+            }
           }
 
           .sensor {
@@ -246,6 +259,10 @@ class Header extends React.Component {
           @from-width tablet {
             .header {
               padding: ${theme.space.inset.l};
+
+              .logo {
+                margin: ${theme.space.inline.default};
+              }
 
               &.homepage {
                 height: ${theme.header.height.homepage};

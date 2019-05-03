@@ -47,6 +47,7 @@ const Overlay = props => {
               background: #fff;
               opacity: 0.8;
               transform: rotate(45deg);
+              cursor: pointer;
             }
 
             &:after {
