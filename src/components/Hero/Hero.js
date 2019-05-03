@@ -10,7 +10,7 @@ const Hero = props => {
     <React.Fragment>
       <section className="hero">
         <h1>
-          This is a demo site of&nbsp;the <strong>heroBlog</strong> GatsbyJS starter
+          Delega<strong>Viaja</strong>Disfruta
         </h1>
         <button onClick={scrollToContent} aria-label="scroll">
           <FaArrowDown />
@@ -36,7 +36,7 @@ const Hero = props => {
 
         h1 {
           text-align: center;
-          font-size: ${theme.hero.h1.size};
+          font-size: ${theme.font.size.l};
           margin: ${theme.space.stack.l};
           color: ${theme.hero.h1.color};
           line-height: ${theme.hero.h1.lineHeight};

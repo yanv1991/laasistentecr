@@ -53,7 +53,7 @@ const SubscribeForm = ({ handleSubmit, handleChange, email }) => {
             padding: 10px;
             width: 100%;
             /* border: color(var(--lightgrey) l(+7%)) 1px solid; */
-            font-size: 1.8rem;
+            font-size: 1rem;
             line-height: 1em;
             font-weight: normal;
             user-select: text;
@@ -66,11 +66,17 @@ const SubscribeForm = ({ handleSubmit, handleChange, email }) => {
               /* border-color: color(var(--lightgrey) l(-2%)); */
             }
           }
+
+          @from-width tablet {
+            & > :global(input) {
+              font-size: 1.8rem;
+            }
+          }
         }
 
         & > :global(.button) {
           max-width: 12.5rem;
-          min-height: 3.7rem;
+          min-height: 2.7rem;
           display: inline-block;
           margin: 0 0 0 10px;
           padding: 0 20px;
@@ -101,6 +107,13 @@ const SubscribeForm = ({ handleSubmit, handleChange, email }) => {
           @media (max-width: 500px) {
             margin: 10px 0 0;
             width: 100%;
+          }
+        }
+
+        @from-width tablet {
+          & > :global(.button) {
+            font-size: 1.5rem;
+            min-height: 3.7rem;
           }
         }
       `}</style>
