@@ -7,7 +7,9 @@ const Overlay = props => {
   return (
     <React.Fragment>
       <div className="overlay">
-        <a className="close" onClick={onClose} />
+        <span className="material-icons close" onClick={onClose}>
+          close
+        </span>
         <div className="content">{children}</div>
       </div>
       {/* --- STYLES --- */}
@@ -30,41 +32,14 @@ const Overlay = props => {
 
           & > :global(.close) {
             position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
+            top: 40px;
+            right: 25px;
             display: block;
-
-            &:before {
-              content: "";
-              position: absolute;
-              top: 40px;
-              right: 25px;
-              display: block;
-              width: 30px;
-              height: 2px;
-              background: #fff;
-              opacity: 0.8;
-              transform: rotate(45deg);
-              cursor: pointer;
-            }
-
-            &:after {
-              content: "";
-              position: absolute;
-              top: 40px;
-              right: 25px;
-              display: block;
-              width: 30px;
-              height: 2px;
-              background: #fff;
-              opacity: 0.8;
-              transform: rotate(-45deg);
-            }
+            color: white;
+            font-size: 3rem;
 
             &:hover {
-              cursor: default;
+              cursor: pointer;
             }
           }
 

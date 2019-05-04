@@ -90,12 +90,14 @@ class Menu extends React.Component {
 
         if (!item.classList.contains("more") && currentCumulativeWidth > maxWidth) {
           const link = item.querySelector("a");
+          const linkText = link.innerText;
 
           item.classList.add("hideItem");
           item.classList.remove("item");
           result.hiddenItems.push({
             to: link.getAttribute("data-slug"),
-            label: link.text
+            label: link.text,
+            action: linkText === "Suscribirse" ? this.props.handleClickSubscription : null
           });
         }
         return result;

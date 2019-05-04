@@ -50,6 +50,12 @@ const Item = props => {
           }
         }
 
+        .hiddenItem {
+          & :global(a.inHiddenItem) {
+            cursor: pointer;
+          }
+        }
+
         :global(.itemList .hideItem) {
           display: none;
         }
