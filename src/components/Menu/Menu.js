@@ -23,12 +23,12 @@ class Menu extends React.Component {
     }));
 
     this.items = [
-      { to: "/", label: "Home", icon: FaHome },
-      { to: "/category/", label: "Categories", icon: FaTag },
-      { to: "/search/", label: "Search", icon: FaSearch },
+      { to: "/", label: "Inicio", icon: FaHome },
+      { to: "/category/", label: "Categorias", icon: FaTag },
+      { to: "/search/", label: "Buscar", icon: FaSearch },
       ...pages,
-      { to: "/contact/", label: "Contact", icon: FaEnvelope },
-      { to: "/#", label: "Subscribe", action: props.handleClickSubscription }
+      { to: "/contact/", label: "Contacto", icon: FaEnvelope },
+      { to: "/#", label: "Suscribirse", action: props.handleClickSubscription }
     ];
 
     this.renderedItems = []; // will contain references to rendered DOM elements of menu
@@ -45,7 +45,8 @@ class Menu extends React.Component {
     screenWidth: PropTypes.number.isRequired,
     fontLoaded: PropTypes.bool.isRequired,
     pages: PropTypes.array.isRequired,
-    theme: PropTypes.object.isRequired
+    theme: PropTypes.object.isRequired,
+    handleClickSubscription: PropTypes.func
   };
 
   componentDidMount() {
