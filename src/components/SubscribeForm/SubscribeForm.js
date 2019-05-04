@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const SubscribeForm = ({ handleSubmit, handleChange, email }) => {
+const SubscribeForm = ({ handleSubmit, handleChange, email, name }) => {
   return (
     <React.Fragment>
       <form
@@ -23,6 +23,16 @@ const SubscribeForm = ({ handleSubmit, handleChange, email }) => {
             onChange={handleChange}
           />
         </div>
+        <div className="formGroup">
+          <input
+            className="subscribe-name"
+            type="text"
+            name="FNAME"
+            value={name}
+            placeholder="tu nombre aquí"
+            onChange={handleChange}
+          />
+        </div>
         <div style={{ position: "absolute", left: "-5000px" }} aria-hidden="true">
           <input type="text" name="email" tabIndex={-1} />
         </div>
@@ -36,6 +46,7 @@ const SubscribeForm = ({ handleSubmit, handleChange, email }) => {
           display: flex;
           align-items: center;
           justify-content: center;
+          flex-direction: column;
           @media (max-width: 500px) {
             -ms-flex-direction: column;
             flex-direction: column;
@@ -44,6 +55,7 @@ const SubscribeForm = ({ handleSubmit, handleChange, email }) => {
 
         & > :global(.formGroup) {
           max-width: 36rem;
+          padding-bottom: 1rem;
           @media (max-width: 500px) {
             width: 100%;
           }
