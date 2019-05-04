@@ -32,14 +32,22 @@ const Overlay = props => {
 
           & > :global(.close) {
             position: absolute;
-            top: 40px;
-            right: 25px;
+            top: 5px;
+            right: 5px;
             display: block;
             color: white;
-            font-size: 3rem;
+            font-size: 2rem;
 
             &:hover {
               cursor: pointer;
+            }
+          }
+
+          @from-width tablet {
+            & > :global(.close) {
+              top: 40px;
+              right: 25px;
+              font-size: 3rem;
             }
           }
 
