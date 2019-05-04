@@ -37,7 +37,7 @@ const Overlay = props => {
             display: block;
             color: white;
             font-size: 2rem;
-            z-index: 100;
+            z-index: 99999;
 
             &:hover {
               cursor: pointer;
