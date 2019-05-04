@@ -43,9 +43,6 @@ class Header extends React.Component {
   };
 
   handleChange = e => {
-    console.log({
-      [`${e.target.name}`]: e.target.value
-    });
     this.setState({
       [`${e.target.name}`]: e.target.value
     });
@@ -61,7 +58,7 @@ class Header extends React.Component {
         }
         this.handleOnClick();
 
-        NotificationManager.success("Success message", "Title here");
+        NotificationManager.success("Operación exitosa", "Gracias por suscribirte");
       })
       .catch(err => {
         console.log("err", err);
