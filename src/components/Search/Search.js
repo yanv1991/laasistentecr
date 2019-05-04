@@ -17,8 +17,14 @@ const Search = props => {
               apiKey={algolia.searchOnlyApiKey}
               indexName={algolia.indexName}
             >
-              <SearchBox translations={{ placeholder: "Search" }} />
-              <Stats />
+              <SearchBox translations={{ placeholder: "Buscar" }} />
+              <Stats
+                translations={{
+                  stats(nbHits, timeSpentMS) {
+                    return `${nbHits} resultados encontrados en ${timeSpentMS}ms`;
+                  }
+                }}
+              />
               <Hits hitComponent={Hit} />
               <Pagination />
             </InstantSearch>

@@ -124,18 +124,10 @@ class Header extends React.Component {
             )}
           </FontLoadedContext.Consumer>
           <Overlay open={isModalOpen} onClose={this.handleOnClick}>
-            {/*
-              <div className="logo logoOverlay">
-                <img
-                  src={config.gravatarImgMd5 == "" ? avatar : config.gravatarImgMd5}
-                  alt={config.siteTitle}
-                />
-              </div>
-              */}
-            <h1 className="title">Subscribe to {config.headerTitle}</h1>
+            <h1 className="title">Suscribirte a {config.headerTitle}</h1>
             <p className="description">
-              Stay up to date! Get all the latest &amp; greatest posts delivered straight to your
-              inbox
+              ¡Estar al día! Obtenga las últimas noticias y promociones enviadas directamente a tu
+              bandeja de entrada.
             </p>
             <SubscribeForm
               handleSubmit={this.handleSubmit}

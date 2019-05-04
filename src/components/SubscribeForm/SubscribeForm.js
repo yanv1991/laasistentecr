@@ -19,7 +19,7 @@ const SubscribeForm = ({ handleSubmit, handleChange, email }) => {
             type="email"
             name="email"
             value={email}
-            placeholder="youremail@example.com"
+            placeholder="tuemail@ejemplo.com"
             onChange={handleChange}
           />
         </div>
@@ -27,7 +27,7 @@ const SubscribeForm = ({ handleSubmit, handleChange, email }) => {
           <input type="text" name="email" tabIndex={-1} />
         </div>
         <button className="button" type="submit">
-          <span>Subscribe</span>
+          <span>Suscribirse</span>
         </button>
       </form>
       {/* --- STYLES --- */}
