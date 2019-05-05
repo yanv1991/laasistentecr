@@ -7,8 +7,6 @@ import config from "../../../content/meta/config";
 const Comments = props => {
   const { facebook, slug = "", theme } = props;
 
-  console.log("facebook.appId", facebook.appId);
-
   return (
     <React.Fragment>
       <div id="post-comments" className="comments">

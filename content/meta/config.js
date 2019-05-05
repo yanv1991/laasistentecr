@@ -5,7 +5,7 @@ module.exports = {
   siteUrl: "http://laasistentecr.com",
   pathPrefix: "",
   siteImage: "preview.jpg",
-  siteLanguage: "en",
+  siteLanguage: "es",
 
   /* author */
   authorName: "fabi zuniga",
