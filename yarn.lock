@@ -12527,6 +12527,11 @@ shallowequal@^1.0.1, shallowequal@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/shallowequal/-/shallowequal-1.0.2.tgz#1561dbdefb8c01408100319085764da3fcf83f8f"
 
+sharethis-reactjs@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/sharethis-reactjs/-/sharethis-reactjs-1.3.3.tgz#888a92404a3525435c511a696883fb0c491984ae"
+  integrity sha512-MkSJPo/h2iS5jXb3xc+/8AZnAf3M9eHfNfQp1RrwX1SmEpBgAyaQ3Qu2Omgpige1629yVGxCAqPevQ+Z1pWVRw==
+
 sharp-cli@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/sharp-cli/-/sharp-cli-1.7.0.tgz#98c3dbfbf8848f59d7c83041a2f6837eabd7aa19"

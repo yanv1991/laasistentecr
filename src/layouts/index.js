@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 import { NotificationContainer } from "react-notifications";
+import { StickyShareButtons } from "sharethis-reactjs";
 
 import { getScreenWidth, timeoutThrottlerHandler } from "../utils/helpers";
 import Footer from "../components/Footer/";
@@ -102,13 +103,23 @@ class Layout extends React.Component {
               id
               html
             }
+            site {
+              siteMetadata {
+                facebook {
+                  appId
+                }
+              }
+            }
           }
         `}
         render={data => {
           const { children } = this.props;
           const {
             footnote: { html: footnoteHTML },
-            pages: { edges: pages }
+            pages: { edges: pages },
+            site: {
+              siteMetadata: { facebook }
+            }
           } = data;
 
           return (
@@ -122,6 +133,40 @@ class Layout extends React.Component {
                       pages={pages}
                       theme={this.state.theme}
                     />
+                    <StickyShareButtons
+                      config={{
+                        alignment: "left", // alignment of buttons (left, right)
+                        color: "social", // set the color of buttons (social, white)
+                        enabled: true, // show/hide buttons (true, false)
+                        font_size: 16, // font size for the buttons
+                        hide_desktop: false, // hide buttons on desktop (true, false)
+                        labels: "counts", // button labels (cta, counts, null)
+                        language: "en", // which language to use (see LANGUAGES)
+                        min_count: 0, // hide react counts less than min_count (INTEGER)
+                        networks: [
+                          // which networks to include (see SHARING NETWORKS)
+                          "facebook",
+                          "twitter",
+                          "email"
+                        ],
+                        padding: 12, // padding within buttons (INTEGER)
+                        radius: 4, // the corner radius on each button (INTEGER)
+                        show_total: true, // show/hide the total share count (true, false)
+                        show_mobile: true, // show/hide the buttons on mobile (true, false)
+                        show_toggle: true, // show/hide the toggle buttons (true, false)
+                        size: 48, // the size of each button (INTEGER)
+                        top: 360, // offset in pixels from the top of the page
+
+                        // OPTIONAL PARAMETERS
+                        url: "http://www.laasistentecr.com" // (defaults to current url)
+                        // image: "https://bit.ly/2CMhCMC" // (defaults to og:image or twitter:image)
+                        // description: "custom text" // (defaults to og:description or twitter:description)
+                        // title: "custom title", // (defaults to og:title or twitter:title)
+                        // message: "custom email text", // (only for email sharing)
+                        // subject: "custom email subject" // (only for email sharing)
+                        // username: "custom twitter handle" // (only for twitter sharing)
+                      }}
+                    />
                     <main>{children}</main>
                     <Footer html={footnoteHTML} theme={this.state.theme} />
 
@@ -129,6 +174,24 @@ class Layout extends React.Component {
                     <style jsx>{`
                       main {
                         min-height: 80vh;
+                      }
+
+                      .feedback {
+                        position: absolute;
+                        top: 11.5%;
+                        left: 0;
+                        background: green;
+                        width: 150px;
+                        height: 45px;
+                        color: red;
+                        z-index: 9;
+                        display: inline-block;
+                        transform: rotate(270deg);
+                        font-size: 24px;
+                        font-weight: 900;
+                        text-align: center;
+                        line-height: 45px;
+                        border-radius: 0px 0px 4px 4px;
                       }
                     `}</style>
                     <style jsx global>{`
