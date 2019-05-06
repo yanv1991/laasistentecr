@@ -1,10 +1,9 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
-import React, { Fragment } from "react";
+import React from "react";
 import VisibilitySensor from "react-visibility-sensor";
 import addToMailchimp from "gatsby-plugin-mailchimp";
 import { NotificationManager } from "react-notifications";
-import { FacebookIcon } from "react-share";
 
 import { ScreenWidthContext, FontLoadedContext } from "../../layouts";
 import config from "../../../content/meta/config";
@@ -98,24 +97,15 @@ class Header extends React.Component {
             {loaded => (
               <ScreenWidthContext.Consumer>
                 {width => (
-                  <Fragment>
-                    <Menu
-                      path={path}
-                      fixed={fixed}
-                      screenWidth={width}
-                      fontLoaded={loaded}
-                      pages={pages}
-                      theme={theme}
-                      handleClickSubscription={this.handleOnClick}
-                    />
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://www.facebook.com/laasistentecr/"
-                    >
-                      {width >= 1024 && <FacebookIcon round size={25} />}
-                    </a>
-                  </Fragment>
+                  <Menu
+                    path={path}
+                    fixed={fixed}
+                    screenWidth={width}
+                    fontLoaded={loaded}
+                    pages={pages}
+                    theme={theme}
+                    handleClickSubscription={this.handleOnClick}
+                  />
                 )}
               </ScreenWidthContext.Consumer>
             )}
