@@ -2,26 +2,8 @@
 title: Acerca
 ---
 
-This is a demo site of the [HeroBlog](https://github.com/greglobinski/gatsby-starter-hero-blog), a [GatsbyJS](https://www.gatsbyjs.org/) starter.
+Hola! Somos Fabiola y Yaser, una apasionada pareja que nos encanta vivir y disfrutar de la vida viajando. Queremos compartir nuestras experiencias y tips mediante herramientas y publicaciones en nuestro sitio web.
 
-### Features:
+LaAsistenteCR es un sitio web que te ayuda y asesora en tus experiencias de viajes, además te brindamos excelentes ofertas en tiquetes aéreos y hospedaje.
 
-* Easy editable content in **Markdown** files (posts, pages and parts)
-* **CSS** with `styled-jsx` and `PostCSS`
-* **SEO** (sitemap generation, robot.txt, meta and OpenGraph Tags)
-* **Social** sharing (Twitter, Facebook, Google, LinkedIn)
-* **Comments** (Facebook)
-* **Images** lazy loading and `webp` support (gatsby-image)
-* Post **categories** (category based post list)
-* Full text **searching** (Algolia)
-* **Contact** form (Netlify form handling)
-* **RSS** feed
-* 100% **PWA** (manifest.webmanifest, offline support, favicons)
-* Google **Analytics**
-* App **favicons** generator (node script)
-* Easy customizable base **styles** via `theme` object generated from `yaml` file (fonts, colors, sizes)
-* React **v.16** (gatsby-plugin-react-next)
-* **Components** lazy loading (social sharing)
-* **ESLint** (google config)
-* **Prettier** code styling
-* Webpack `BundleAnalyzerPlugin`
+Aca te brindamos consejos y requisitos que debes cumplir para viajar a un determinado destino, asi podras disfrutar sin ninguna complicación.
