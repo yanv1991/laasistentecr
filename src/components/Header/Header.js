@@ -35,12 +35,6 @@ class Header extends React.Component {
     return `${fixed} ${homepage}`;
   };
 
-  handleOnClick = () => {
-    this.setState(prevState => {
-      return { ...prevState, isModalOpen: !prevState.isModalOpen };
-    });
-  };
-
   handleChange = e => {
     this.setState({
       [`${e.target.name}`]: e.target.value
@@ -75,7 +69,7 @@ class Header extends React.Component {
   }
 
   render() {
-    const { pages, path, theme } = this.props;
+    const { pages, path, theme, handleClickSubscription } = this.props;
     const { fixed, isModalOpen, email } = this.state;
 
     return (
@@ -104,7 +98,7 @@ class Header extends React.Component {
                     fontLoaded={loaded}
                     pages={pages}
                     theme={theme}
-                    handleClickSubscription={this.handleOnClick}
+                    handleClickSubscription={handleClickSubscription}
                   />
                 )}
               </ScreenWidthContext.Consumer>
@@ -349,7 +343,8 @@ class Header extends React.Component {
 Header.propTypes = {
   pages: PropTypes.array.isRequired,
   path: PropTypes.string.isRequired,
-  theme: PropTypes.object.isRequired
+  theme: PropTypes.object.isRequired,
+  handleClickSubscription: PropTypes.func
 };
 
 export default Header;

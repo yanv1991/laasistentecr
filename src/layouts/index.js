@@ -12,6 +12,7 @@ import Header from "../components/Header";
 export const ThemeContext = React.createContext(null);
 export const ScreenWidthContext = React.createContext(0);
 export const FontLoadedContext = React.createContext(false);
+export const SubscribeContext = React.createContext(false);
 
 import themeObjectFromYaml from "../theme/theme.yaml";
 
@@ -24,7 +25,8 @@ class Layout extends React.Component {
       font600loaded: false,
       screenWidth: 0,
       headerMinimized: false,
-      theme: themeObjectFromYaml
+      theme: themeObjectFromYaml,
+      isSubscribeOpen: false,
     };
 
     if (typeof window !== `undefined`) {
@@ -76,6 +78,12 @@ class Layout extends React.Component {
     );
   };
 
+  handleOnClick = () => {
+    this.setState(prevState => {
+      return { ...prevState, isSubscribeOpen: !prevState.isSubscribeOpen };
+    });
+  };
+
   render() {
     return (
       <StaticQuery
@@ -125,86 +133,90 @@ class Layout extends React.Component {
             <ThemeContext.Provider value={this.state.theme}>
               <FontLoadedContext.Provider value={this.state.font400loaded}>
                 <ScreenWidthContext.Provider value={this.state.screenWidth}>
-                  <React.Fragment>
-                    <NotificationContainer />
-                    <Header
-                      path={this.props.location.pathname}
-                      pages={pages}
-                      theme={this.state.theme}
-                    />
-                    <main>{children}</main>
-                    <Footer html={footnoteHTML} theme={this.state.theme} />
+                  <SubscribeContext.Provider value={this.state.isSubscribeOpen}>
+                    <React.Fragment>
+                      <NotificationContainer />
+                      <Header
+                        path={this.props.location.pathname}
+                        pages={pages}
+                        theme={this.state.theme}
+                        isSubscribeOpen={this.state.isSubscribeOpen}
+                        handleClickSubscription={this.handleOnClick}
+                      />
+                      <main>{children}</main>
+                      <Footer html={footnoteHTML} theme={this.state.theme} />
 
-                    {/* --- STYLES --- */}
-                    <style jsx>{`
-                      main {
-                        min-height: 80vh;
-                      }
+                      {/* --- STYLES --- */}
+                      <style jsx>{`
+                        main {
+                          min-height: 80vh;
+                        }
 
-                      .feedback {
-                        position: absolute;
-                        top: 11.5%;
-                        left: 0;
-                        background: green;
-                        width: 150px;
-                        height: 45px;
-                        color: red;
-                        z-index: 9;
-                        display: inline-block;
-                        transform: rotate(270deg);
-                        font-size: 24px;
-                        font-weight: 900;
-                        text-align: center;
-                        line-height: 45px;
-                        border-radius: 0px 0px 4px 4px;
-                      }
-                    `}</style>
-                    <style jsx global>{`
-                      html {
-                        box-sizing: border-box;
-                      }
-                      *,
-                      *:after,
-                      *:before {
-                        box-sizing: inherit;
-                        margin: 0;
-                        padding: 0;
-                      }
-                      body {
-                        font-family: ${this.state.font400loaded
-                          ? "'Open Sans', sans-serif;"
-                          : "Arial, sans-serif;"};
-                      }
-                      .modalOpen {
-                        overflow: hidden;
-                      }
-                      h1,
-                      h2,
-                      h3 {
-                        font-weight: ${this.state.font600loaded ? 600 : 400};
-                        line-height: 1.1;
-                        letter-spacing: -0.03em;
-                        margin: 0;
-                      }
-                      h1 {
-                        letter-spacing: -0.04em;
-                      }
-                      p {
-                        margin: 0;
-                      }
-                      strong {
-                        font-weight: ${this.state.font600loaded ? 600 : 400};
-                      }
-                      a {
-                        text-decoration: none;
-                        color: #666;
-                      }
-                      main {
-                        width: auto;
-                        display: block;
-                      }
-                    `}</style>
-                  </React.Fragment>
+                        .feedback {
+                          position: absolute;
+                          top: 11.5%;
+                          left: 0;
+                          background: green;
+                          width: 150px;
+                          height: 45px;
+                          color: red;
+                          z-index: 9;
+                          display: inline-block;
+                          transform: rotate(270deg);
+                          font-size: 24px;
+                          font-weight: 900;
+                          text-align: center;
+                          line-height: 45px;
+                          border-radius: 0px 0px 4px 4px;
+                        }
+                      `}</style>
+                      <style jsx global>{`
+                        html {
+                          box-sizing: border-box;
+                        }
+                        *,
+                        *:after,
+                        *:before {
+                          box-sizing: inherit;
+                          margin: 0;
+                          padding: 0;
+                        }
+                        body {
+                          font-family: ${this.state.font400loaded
+                            ? "'Open Sans', sans-serif;"
+                            : "Arial, sans-serif;"};
+                        }
+                        .modalOpen {
+                          overflow: hidden;
+                        }
+                        h1,
+                        h2,
+                        h3 {
+                          font-weight: ${this.state.font600loaded ? 600 : 400};
+                          line-height: 1.1;
+                          letter-spacing: -0.03em;
+                          margin: 0;
+                        }
+                        h1 {
+                          letter-spacing: -0.04em;
+                        }
+                        p {
+                          margin: 0;
+                        }
+                        strong {
+                          font-weight: ${this.state.font600loaded ? 600 : 400};
+                        }
+                        a {
+                          text-decoration: none;
+                          color: #666;
+                        }
+                        main {
+                          width: auto;
+                          display: block;
+                        }
+                      `}</style>
+                    </React.Fragment>
+                  </SubscribeContext.Provider>
                 </ScreenWidthContext.Provider>
               </FontLoadedContext.Provider>
             </ThemeContext.Provider>
