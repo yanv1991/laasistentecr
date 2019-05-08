@@ -2,7 +2,7 @@ module.exports = {
   siteTitle: "LaAsistenteCR - recomendaciones y sugerencias para tus viajes", // <title>
   shortSiteTitle: "LaAsistenteCR - un Asistente de Viajes", // <title> ending for posts and pages
   siteDescription: "Blog de viajes y ocio.",
-  siteUrl: "http://laasistentecr.com",
+  siteUrl: "https://www.laasistentecr.com",
   pathPrefix: "",
   siteImage: "preview.jpg",
   siteLanguage: "es",
