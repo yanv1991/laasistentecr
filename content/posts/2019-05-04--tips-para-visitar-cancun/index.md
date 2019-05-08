@@ -5,7 +5,7 @@ cover: photo-1465070845512-2b2dbdc6df66.jpg
 author: Fabiola Zuñiga
 ---
 
-![piramide](./photo-1465070845512-2b2dbdc6df66.jpeg)
+![piramide](./photo-1465070845512-2b2dbdc6df66.jpg)
 
 Estos son algunos de los tips que pueden ayudar para mejorar la experiencia al visitar Cancún, espero te puedan ayudar en tus próximas vacaciones.
 
