@@ -8,6 +8,7 @@ import { NotificationContainer } from "react-notifications";
 import { getScreenWidth, timeoutThrottlerHandler } from "../utils/helpers";
 import Footer from "../components/Footer/";
 import Header from "../components/Header";
+import Sticky from "../components/Sticky";
 
 export const ThemeContext = React.createContext(null);
 export const ScreenWidthContext = React.createContext(0);
@@ -141,6 +142,7 @@ class Layout extends React.Component {
                   >
                     <React.Fragment>
                       <NotificationContainer />
+                      {/* <Sticky /> */}
                       <Header
                         path={this.props.location.pathname}
                         pages={pages}
