@@ -16,7 +16,6 @@ import avatar from "../../images/jpg/avatar.png";
 class Header extends React.Component {
   state = {
     fixed: false,
-    isModalOpen: false,
     email: ""
   };
 
@@ -61,7 +60,7 @@ class Header extends React.Component {
   componentDidUpdate() {
     const body = document.body;
 
-    if (this.state.isModalOpen) {
+    if (this.props.isSubscribeOpen) {
       body.classList.add("modalOpen");
     } else {
       body.classList.remove("modalOpen");
@@ -69,8 +68,8 @@ class Header extends React.Component {
   }
 
   render() {
-    const { pages, path, theme, handleClickSubscription } = this.props;
-    const { fixed, isModalOpen, email } = this.state;
+    const { pages, path, theme, handleClickSubscription, isSubscribeOpen } = this.props;
+    const { fixed, email } = this.state;
 
     return (
       <React.Fragment>
@@ -104,7 +103,7 @@ class Header extends React.Component {
               </ScreenWidthContext.Consumer>
             )}
           </FontLoadedContext.Consumer>
-          <Overlay open={isModalOpen} onClose={this.handleOnClick}>
+          <Overlay open={isSubscribeOpen} onClose={handleClickSubscription}>
             <h1 className="title">Suscribirte a {config.headerTitle}</h1>
             <p className="description">
               ¡Estar al día! Obtenga las últimas noticias y promociones enviadas directamente a tu
@@ -344,7 +343,8 @@ Header.propTypes = {
   pages: PropTypes.array.isRequired,
   path: PropTypes.string.isRequired,
   theme: PropTypes.object.isRequired,
-  handleClickSubscription: PropTypes.func
+  handleClickSubscription: PropTypes.func,
+  isSubscribeOpen: PropTypes.bool
 };
 
 export default Header;

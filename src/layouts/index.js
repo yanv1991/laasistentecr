@@ -12,7 +12,7 @@ import Header from "../components/Header";
 export const ThemeContext = React.createContext(null);
 export const ScreenWidthContext = React.createContext(0);
 export const FontLoadedContext = React.createContext(false);
-export const SubscribeContext = React.createContext(false);
+export const SubscribeContext = React.createContext({ isOpen: false, toggleSubscribe: () => {} });
 
 import themeObjectFromYaml from "../theme/theme.yaml";
 
@@ -26,7 +26,7 @@ class Layout extends React.Component {
       screenWidth: 0,
       headerMinimized: false,
       theme: themeObjectFromYaml,
-      isSubscribeOpen: false,
+      isSubscribeOpen: false
     };
 
     if (typeof window !== `undefined`) {
@@ -133,7 +133,12 @@ class Layout extends React.Component {
             <ThemeContext.Provider value={this.state.theme}>
               <FontLoadedContext.Provider value={this.state.font400loaded}>
                 <ScreenWidthContext.Provider value={this.state.screenWidth}>
-                  <SubscribeContext.Provider value={this.state.isSubscribeOpen}>
+                  <SubscribeContext.Provider
+                    value={{
+                      isOpen: this.state.isSubscribeOpen,
+                      toggleSubscribe: this.handleOnClick
+                    }}
+                  >
                     <React.Fragment>
                       <NotificationContainer />
                       <Header
