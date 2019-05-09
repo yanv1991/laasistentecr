@@ -67,7 +67,7 @@ class Layout extends React.Component {
       weight: weight
     });
 
-    font.load(null, 10000).then(
+    font.load().then(
       () => {
         console.log(`${name} is available`);
         this.setState({ [`${name}loaded`]: true });
