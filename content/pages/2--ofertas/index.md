@@ -8,10 +8,10 @@ Encuentra las mejores ofertas en vuelos y hospedaje aqui:
 
 Ofertas en los siguientes destinos (ida y vuelta):
 
-* [Las Vegas, NV:  $284](http://bit.ly/2H9vlff)
-* [Ciudad de México:  $185](http://bit.ly/2PU5oEj)
-* [La Habana, Cuba:  $227](http://bit.ly/2WE8n6J)
-* [Newark, NJ:  $258](http://bit.ly/2H9I56M)
+* <a href="http://bit.ly/2H9vlff" target="_blank">Las Vegas, NV: $284</a>
+* <a href="http://bit.ly/2PU5oEj" target="_blank">Ciudad de México: $185</a>
+* <a href="http://bit.ly/2WE8n6J" target="_blank">La Habana, Cuba: $227</a>
+* <a href="http://bit.ly/2H9I56M" target="_blank">Newark, NJ:  $258</a>
 
 ![la habana](./photo-1465070845512-2b2dbdc6df66.jpeg)
 
