@@ -7,10 +7,8 @@ import {
   FacebookIcon,
   TwitterIcon
 } from "react-share";
-import Button from "antd/lib/button";
 
 import config from "../../../content/meta/config";
-import { SubscribeContext } from "../../layouts";
 
 const PostShare = props => {
   const {
@@ -29,41 +27,32 @@ const PostShare = props => {
 
   return (
     <React.Fragment>
-      <SubscribeContext.Consumer>
-        {({ toggleSubscribe }) => (
-          <div className="share">
-            <span className="label">SHARE</span>
-            <div className="links">
-              <TwitterShareButton
-                url={url}
-                title={title}
-                additionalProps={{
-                  "aria-label": "Twitter share"
-                }}
-              >
-                <TwitterIcon round size={iconSize} />
-              </TwitterShareButton>
-              <FacebookShareButton
-                url={url}
-                quote={excerpt ? `${title} - ${excerpt}` : `${title}`}
-                additionalProps={{
-                  "aria-label": "Facebook share"
-                }}
-              >
-                <FacebookIcon round size={iconSize} />
-                <FacebookShareCount url={url}>
-                  {count => <div className="share-count">{filter(count)}</div>}
-                </FacebookShareCount>
-              </FacebookShareButton>
-            </div>
-            <div className="subscribe">
-              <Button onClick={toggleSubscribe} type="primary">
-                SUSCRIBIRTE
-              </Button>
-            </div>
-          </div>
-        )}
-      </SubscribeContext.Consumer>
+      <div className="share">
+        <span className="label">SHARE</span>
+        <div className="links">
+          <TwitterShareButton
+            url={url}
+            title={title}
+            additionalProps={{
+              "aria-label": "Twitter share"
+            }}
+          >
+            <TwitterIcon round size={iconSize} />
+          </TwitterShareButton>
+          <FacebookShareButton
+            url={url}
+            quote={excerpt ? `${title} - ${excerpt}` : `${title}`}
+            additionalProps={{
+              "aria-label": "Facebook share"
+            }}
+          >
+            <FacebookIcon round size={iconSize} />
+            <FacebookShareCount url={url}>
+              {count => <div className="share-count">{filter(count)}</div>}
+            </FacebookShareCount>
+          </FacebookShareButton>
+        </div>
+      </div>
       {/* --- STYLES --- */}
       <style jsx>{`
         .subscribe {
