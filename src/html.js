@@ -27,16 +27,12 @@ export default class HTML extends React.Component {
           <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png" />
           <link rel="stylesheet" type="text/css" href="/css/react-notifications.css" />
           <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
-          <script>
-            {(() => {
-              if (typeof window !== "undefined") {
-              (adsbygoogle = window.adsbygoogle || []).push({ // eslint-disable-line
-                  google_ad_client: "ca-pub-9017701188036910",
-                  enable_page_level_ads: true
-                });
-              }
-            })()}
-          </script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html:
+                "(window.adsbygoogle = window.adsbygoogle || []).push({google_ad_client: 'ca-pub-9017701188036910', enable_page_level_ads: true});"
+            }}
+          />
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
