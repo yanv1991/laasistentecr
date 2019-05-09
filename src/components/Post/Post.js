@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "prismjs/themes/prism-okaidia.css";
 import Button from "antd/lib/button";
+import "antd/lib/button/style/index.css";
 
 import asyncComponent from "../AsyncComponent";
 import Headline from "../Article/Headline";
