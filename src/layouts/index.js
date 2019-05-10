@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
 import { NotificationContainer } from "react-notifications";
+import { BackTop } from "antd";
+import "antd/lib/back-top/style/index.css";
 
 import { getScreenWidth, timeoutThrottlerHandler } from "../utils/helpers";
 import Footer from "../components/Footer/";
@@ -142,7 +144,8 @@ class Layout extends React.Component {
                   >
                     <React.Fragment>
                       <NotificationContainer />
-                      {/* <Sticky /> */}
+                      <Sticky />
+                      <BackTop />
                       <Header
                         path={this.props.location.pathname}
                         pages={pages}
