@@ -6,6 +6,11 @@ export default class HTML extends React.Component {
     return (
       <html {...this.props.htmlAttributes}>
         <head>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `var el=document.getElementsByTagName("head")[0],comment=document.createComment("TradeDoubler site verification 3098781");el.appendChild(comment);`
+            }}
+          />
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
