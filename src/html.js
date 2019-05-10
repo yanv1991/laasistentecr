@@ -33,6 +33,11 @@ export default class HTML extends React.Component {
                 "(window.adsbygoogle = window.adsbygoogle || []).push({google_ad_client: 'ca-pub-9017701188036910', enable_page_level_ads: true});"
             }}
           />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `var el=document.getElementsByTagName("head")[0],comment=document.createComment("TradeDoubler site verification 3098423");el.appendChild(comment);`
+            }}
+          />
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
