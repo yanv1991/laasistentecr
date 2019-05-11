@@ -11,13 +11,15 @@ const Article = props => {
       <article className="article">
         {children}
         {!HIDE_SEARCH_LIST.includes(slug) && (
-          <iframe
-            scrolling="no"
-            width="700"
-            height="215"
-            frameBorder="0"
-            src="//www.travelpayouts.com/widgets/d1b92f2b86738762bdbe044a5ddce7bc.html?v=1739"
-          />
+          <div className="embed-container">
+            <iframe
+              scrolling="no"
+              width=""
+              height="215"
+              frameBorder="0"
+              src="//www.travelpayouts.com/widgets/d1b92f2b86738762bdbe044a5ddce7bc.html?v=1739"
+            />
+          </div>
         )}
       </article>
 
@@ -26,11 +28,38 @@ const Article = props => {
         .article {
           padding: ${theme.space.inset.default};
           margin: 0 auto;
+
+          .embed-container {
+            position: relative;
+            padding-bottom: 169.5%;
+            height: 0;
+            overflow: hidden;
+
+            iframe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            }
+          }
         }
+        @from-width 375px {
+          .article {
+            .embed-container {
+              padding-bottom: 119.5%;
+            }
+          }
+        }
+
         @from-width tablet {
           .article {
             padding: ${`calc(${theme.space.default}) calc(${theme.space.default} * 2)`};
             max-width: ${theme.text.maxWidth.tablet};
+
+            .embed-container {
+              padding-bottom: 50.25%;
+            }
           }
         }
         @from-width desktop {
@@ -39,6 +68,10 @@ const Article = props => {
               theme.space.default
             } * 2)`};
             max-width: ${theme.text.maxWidth.desktop};
+
+            .embed-container {
+              padding-bottom: 31.25%;
+            }
           }
         }
       `}</style>
