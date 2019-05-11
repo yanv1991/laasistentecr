@@ -13,14 +13,15 @@ const PageTemplate = props => {
       site: {
         siteMetadata: { facebook }
       }
-    }
+    },
+    pageContext
   } = props;
 
   return (
     <React.Fragment>
       <ThemeContext.Consumer>
         {theme => (
-          <Article theme={theme}>
+          <Article theme={theme} slug={pageContext.slug}>
             <Page page={page} theme={theme} />
           </Article>
         )}
