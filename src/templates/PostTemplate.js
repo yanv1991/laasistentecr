@@ -17,14 +17,14 @@ const PostTemplate = props => {
         siteMetadata: { facebook }
       }
     },
-    pageContext: { next, prev }
+    pageContext: { next, prev, slug }
   } = props;
 
   return (
     <React.Fragment>
       <ThemeContext.Consumer>
         {theme => (
-          <Article theme={theme}>
+          <Article theme={theme} slug={slug}>
             <Post
               post={post}
               next={next}
