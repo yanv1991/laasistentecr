@@ -11,15 +11,28 @@ const Article = props => {
       <article className="article">
         {children}
         {!HIDE_SEARCH_LIST.includes(slug) && (
-          <div className="embed-container">
-            <iframe
-              scrolling="no"
-              width=""
-              height="215"
-              frameBorder="0"
-              src="//www.travelpayouts.com/widgets/d1b92f2b86738762bdbe044a5ddce7bc.html?v=1739"
-            />
-          </div>
+          <React.Fragment>
+            <div className="embed-container">
+              <iframe
+                scrolling="no"
+                width=""
+                height="215"
+                frameBorder="0"
+                src="//www.travelpayouts.com/widgets/d1b92f2b86738762bdbe044a5ddce7bc.html?v=1739"
+              />
+            </div>
+            {/*
+              <div className="embed-container">
+                <iframe
+                  src="//maps.avs.io/flights/?auto_fit_map=true&hide_sidebar=true&hide_reformal=true&disable_googlemaps_ui=true&zoom=3&show_filters_icon=true&redirect_on_click=true&small_spinner=true&hide_logo=true&direct=true&lines_type=TpLines&cluster_manager=TpWidgetClusterManager&marker=225301.map&show_tutorial=false&locale=en&host=map.jetradar.com&origin_iata=SJO"
+                  width=""
+                  height="600px"
+                  scrolling="no"
+                  frameBorder="0"
+                />
+              </div>
+              */}
+          </React.Fragment>
         )}
       </article>
 
