@@ -107,7 +107,7 @@ export default class Article extends React.Component {
                 padding-bottom: 31.25%;
 
                 iframe {
-                  width: 103%;
+                  width: 104%;
                 }
               }
 

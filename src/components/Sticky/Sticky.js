@@ -139,6 +139,7 @@ class Sticky extends React.Component {
                 visibility: hidden;
                 opacity: 0;
                 transition: visibility 0.5s, opacity 0.5s linear;
+                margin-left: 1rem;
               }
 
               :global(.fade) {
