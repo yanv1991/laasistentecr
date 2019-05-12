@@ -105,10 +105,6 @@ export default class Article extends React.Component {
 
               .embed-container {
                 padding-bottom: 31.25%;
-
-                iframe {
-                  width: 104%;
-                }
               }
 
               .deals {
