@@ -28,7 +28,7 @@ class Menu extends React.Component {
       { to: "/search/", label: "Buscar", icon: FaSearch },
       ...pages,
       { to: "/contact/", label: "Contacto", icon: FaEnvelope },
-      { to: "/#", label: "Suscribirse", action: props.handleClickSubscription }
+      { to: "/subscribe", label: "Suscribirse" }
     ];
 
     this.renderedItems = []; // will contain references to rendered DOM elements of menu
@@ -46,7 +46,6 @@ class Menu extends React.Component {
     fontLoaded: PropTypes.bool.isRequired,
     pages: PropTypes.array.isRequired,
     theme: PropTypes.object.isRequired,
-    handleClickSubscription: PropTypes.func
   };
 
   componentDidMount() {

@@ -48,7 +48,7 @@ class Header extends React.Component {
         if (result !== "success") {
           throw msg;
         }
-        this.handleOnClick();
+        this.props.handleClickSubscription();
 
         NotificationManager.success("Operación exitosa", "Gracias por suscribirte");
       })
@@ -97,7 +97,6 @@ class Header extends React.Component {
                     fontLoaded={loaded}
                     pages={pages}
                     theme={theme}
-                    handleClickSubscription={handleClickSubscription}
                   />
                 )}
               </ScreenWidthContext.Consumer>
@@ -343,8 +342,8 @@ Header.propTypes = {
   pages: PropTypes.array.isRequired,
   path: PropTypes.string.isRequired,
   theme: PropTypes.object.isRequired,
-  handleClickSubscription: PropTypes.func,
-  isSubscribeOpen: PropTypes.bool
+  isSubscribeOpen: PropTypes.bool,
+  handleClickSubscription: PropTypes.func
 };
 
 export default Header;
