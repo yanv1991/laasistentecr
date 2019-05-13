@@ -5,7 +5,9 @@ import {
   TwitterShareButton,
   FacebookShareCount,
   FacebookIcon,
-  TwitterIcon
+  TwitterIcon,
+  WhatsappShareButton,
+  WhatsappIcon
 } from "react-share";
 
 import config from "../../../content/meta/config";
@@ -51,6 +53,15 @@ const PostShare = props => {
               {count => <div className="share-count">{filter(count)}</div>}
             </FacebookShareCount>
           </FacebookShareButton>
+          <WhatsappShareButton
+            url={url}
+            title={title}
+            additionalProps={{
+              "aria-label": "Whatsapp share"
+            }}
+          >
+            <WhatsappIcon round size={iconSize} />
+          </WhatsappShareButton>
         </div>
       </div>
       {/* --- STYLES --- */}
