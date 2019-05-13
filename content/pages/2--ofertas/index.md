@@ -8,10 +8,10 @@ Encuentra las mejores ofertas en vuelos y hospedaje aqui:
 
 Ofertas en los siguientes destinos (ida y vuelta):
 
-* <a href="http://bit.ly/2JARSVg" target="_blank">Los Angeles, CA: $321</a>
-* <a href="http://bit.ly/2PViRf6" target="_blank">Bogota, CO: $273</a>
-* <a href="http://bit.ly/2HcX5Ri" target="_blank">New York, US: $277</a>
-* <a href="http://bit.ly/2VgIx7h" target="_blank">París, FR:  $360</a>
+* <a href="http://bit.ly/2YlnoKU" target="_blank">Los Angeles, CA: $321</a>
+* <a href="http://bit.ly/2WDloxj" target="_blank">Bogota, CO: $273</a>
+* <a href="http://bit.ly/2VXG3Ph" target="_blank">New York, US: $277</a>
+* <a href="http://bit.ly/2PXE5ZQ" target="_blank">París, FR:  $360</a>
 
 ![torre eiffel](./photo-1465070845512-2b2dbdc6df66.jpeg)
 
