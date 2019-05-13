@@ -12,6 +12,8 @@ Ofertas en los siguientes destinos (ida y vuelta):
 * <a href="http://bit.ly/2WDloxj" target="_blank">Bogota, CO: $273</a>
 * <a href="http://bit.ly/2VXG3Ph" target="_blank">New York, US: $277</a>
 * <a href="http://bit.ly/2PXE5ZQ" target="_blank">París, FR:  $360</a>
+* <a href="http://bit.ly/2Hi0ler" target="_blank">Santiago, CH:  $360</a>
+* <a href="http://bit.ly/2YxBfy3" target="_blank">Buenos Aires, ARG:  $360</a>
 
 ![torre eiffel](./photo-1465070845512-2b2dbdc6df66.jpeg)
 
