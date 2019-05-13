@@ -141,7 +141,7 @@ class Layout extends React.Component {
                   >
                     <React.Fragment>
                       <NotificationContainer />
-                      <Sticky />
+                      {this.props.location.pathname !== "/subscribe" && <Sticky />}
                       <BackTop />
                       <Header
                         path={this.props.location.pathname}
