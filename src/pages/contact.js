@@ -13,14 +13,15 @@ const ContactPage = props => {
       site: {
         siteMetadata: { facebook }
       }
-    }
+    },
+    location,
   } = props;
 
   return (
     <React.Fragment>
       <ThemeContext.Consumer>
         {theme => (
-          <Article theme={theme}>
+          <Article theme={theme} slug={location.pathname}>
             <header>
               <Headline title="Contacto" theme={theme} />
             </header>

@@ -43,14 +43,15 @@ class Subscribe extends React.Component {
 
   render() {
     const {
-      form: { getFieldDecorator }
+      form: { getFieldDecorator },
+      location
     } = this.props;
 
     return (
       <React.Fragment>
         <ThemeContext.Consumer>
           {theme => (
-            <Article theme={theme}>
+            <Article theme={theme} slug={location.pathname}>
               <header>
                 <Headline title="Suscribirte" theme={theme} />
               </header>

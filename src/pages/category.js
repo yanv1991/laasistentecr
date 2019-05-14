@@ -15,7 +15,8 @@ const CategoryPage = props => {
       site: {
         siteMetadata: { facebook }
       }
-    }
+    },
+    location
   } = props;
 
   // Create category list
@@ -45,7 +46,7 @@ const CategoryPage = props => {
     <React.Fragment>
       <ThemeContext.Consumer>
         {theme => (
-          <Article theme={theme}>
+          <Article theme={theme} slug={location.pathname}>
             <header>
               <Headline title="Posts por categorias" theme={theme} />
             </header>

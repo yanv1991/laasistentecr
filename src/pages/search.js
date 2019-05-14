@@ -16,14 +16,15 @@ const SearchPage = props => {
       site: {
         siteMetadata: { algolia, facebook }
       }
-    }
+    },
+    location,
   } = props;
 
   return (
     <React.Fragment>
       <ThemeContext.Consumer>
         {theme => (
-          <Article theme={theme}>
+          <Article theme={theme} slug={location.pathname}>
             <div className="icon">
               <AlgoliaIcon />
             </div>
