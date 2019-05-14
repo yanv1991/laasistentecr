@@ -3,7 +3,15 @@ import PropTypes from "prop-types";
 
 import { ScreenWidthContext } from "../../layouts";
 
-const HIDE_SEARCH_LIST = ["/acerca/", "/privacidad/", "/ofertas/"];
+const HIDE_SEARCH_LIST = [
+  "/acerca/",
+  "/privacidad/",
+  "/ofertas/",
+  "/search/",
+  "/category/",
+  "/contact/",
+  "/subscribe/"
+];
 
 export default class Article extends React.Component {
   render() {

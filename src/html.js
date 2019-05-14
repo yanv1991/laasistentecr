@@ -38,6 +38,17 @@ export default class HTML extends React.Component {
           {this.props.preBodyComponents}
           <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
           {this.props.postBodyComponents}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(d, sc, u) {
+                  var s = d.createElement(sc), p = d.getElementsByTagName(sc)[0];
+                  s.type = 'text/javascript';
+                  s.async = true;
+                  s.src = u + '?v=' + (+new Date());
+                  p.parentNode.insertBefore(s,p);
+                })(document, 'script', '//aff.bstatic.com/static/affiliate_base/js/flexiproduct.js');`
+            }}
+          />
         </body>
       </html>
     );
