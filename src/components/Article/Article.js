@@ -4,18 +4,19 @@ import PropTypes from "prop-types";
 import { ScreenWidthContext } from "../../layouts";
 
 const HIDE_SEARCH_LIST = [
-  "/acerca/",
-  "/privacidad/",
-  "/ofertas/",
-  "/search/",
-  "/category/",
-  "/contact/",
-  "/subscribe/"
+  "acerca",
+  "privacidad",
+  "ofertas",
+  "search",
+  "category",
+  "contact",
+  "subscribe"
 ];
 
 export default class Article extends React.Component {
   render() {
     const { children, theme, slug } = this.props;
+    const parsedSlug = slug.replace(/\//g, "");
 
     return (
       <React.Fragment>
@@ -28,7 +29,7 @@ export default class Article extends React.Component {
                 {children}
                 {
                   <React.Fragment>
-                    {!HIDE_SEARCH_LIST.includes(slug) && (
+                    {!HIDE_SEARCH_LIST.includes(parsedSlug) && (
                       <div className="embed-container">
                         <iframe
                           scrolling="no"
@@ -39,7 +40,7 @@ export default class Article extends React.Component {
                         />
                       </div>
                     )}
-                    {slug === "/ofertas/" && (
+                    {parsedSlug === "ofertas" && (
                       <div className="embed-container deals">
                         <iframe
                           scrolling="no"
