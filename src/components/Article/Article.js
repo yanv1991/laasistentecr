@@ -15,7 +15,7 @@ const HIDE_SEARCH_LIST = [
 
 export default class Article extends React.Component {
   render() {
-    const { children, theme, slug } = this.props;
+    const { children, theme, slug = "" } = this.props;
     const parsedSlug = slug.replace(/\//g, "");
 
     return (
