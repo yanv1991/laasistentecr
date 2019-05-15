@@ -134,7 +134,15 @@ module.exports = {
                 width: "25px"
               }
             }
-          }
+          },
+          {
+            resolve: "gatsby-remark-embed-youtube",
+            options: {
+              width: 800,
+              height: 400
+            }
+          },
+          `gatsby-remark-responsive-iframe`
         ]
       }
     },
@@ -283,21 +291,6 @@ module.exports = {
           "https://gmail.us20.list-manage.com/subscribe/post?u=45518dc629d031fe22c96f13d&amp;id=a6ca913ef6" // see instructions section below
       }
     },
-    "gatsby-plugin-robots-txt",
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [
-          {
-            resolve: "gatsby-remark-embed-youtube",
-            options: {
-              width: 800,
-              height: 400
-            }
-          },
-          `gatsby-remark-responsive-iframe`
-        ]
-      }
-    }
+    "gatsby-plugin-robots-txt"
   ]
 };
