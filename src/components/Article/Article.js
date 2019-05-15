@@ -22,8 +22,6 @@ export default class Article extends React.Component {
       <React.Fragment>
         <ScreenWidthContext.Consumer>
           {width => {
-            const dealType = width >= 1024 ? "brickwork" : "slider";
-
             return (
               <article className="article">
                 {children}
@@ -37,17 +35,6 @@ export default class Article extends React.Component {
                           height="215"
                           frameBorder="0"
                           src="//www.travelpayouts.com/widgets/d1b92f2b86738762bdbe044a5ddce7bc.html?v=1739"
-                        />
-                      </div>
-                    )}
-                    {parsedSlug === "ofertas" && (
-                      <div className="embed-container deals">
-                        <iframe
-                          scrolling="no"
-                          width=""
-                          height="300"
-                          frameBorder="0"
-                          src={`//www.travelpayouts.com/ducklett/iframe.html?widget_type=${dealType}&currency=usd&host=search.jetradar.com&marker=225301.&limit=9&powered_by=true&origin_iatas=SJO`}
                         />
                       </div>
                     )}
@@ -81,6 +68,10 @@ export default class Article extends React.Component {
             .deals {
               padding-bottom: 0;
               height: 300px;
+            }
+
+            .hide {
+              display: none;
             }
           }
           @from-width 375px {
