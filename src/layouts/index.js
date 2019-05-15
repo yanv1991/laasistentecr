@@ -169,19 +169,16 @@ class Layout extends React.Component {
                         <aside className={`${showAside ? "" : "hide"}`} />
                         <main>{children}</main>
                         <aside className={`${showAside ? "" : "hide"}`}>
-                          <ins
-                            className="bookingaff"
-                            data-aid="1779293"
-                            data-target_aid="1779293"
-                            data-prod="dfl2"
-                            data-width="100%"
-                            data-height="auto"
-                            data-lang="es"
-                            data-currency="USD"
-                            data-df_num_properties="3"
+                          <a
+                            target="_blank"
+                            href="https://shareasale.com/r.cfm?b=845324&amp;u=2080537&amp;m=32794&amp;urllink=&amp;afftrack="
                           >
-                            <a href="//www.booking.com?aid=1779293">Booking.com</a>
-                          </ins>
+                            <img
+                              src="https://static.shareasale.com/image/32794/a_01.jpg"
+                              border="0"
+                              alt="Parque Xoximilco, paga 4 adultos y el 5to es gratis. Musica en vivo, tequila y más. Cancun, Riviera Maya."
+                            />
+                          </a>
                         </aside>
                       </div>
                       <div className={`banner ${isOfertas ? "hide" : ""}`}>
@@ -197,20 +194,47 @@ class Layout extends React.Component {
                           <a href={`//www.booking.com?aid=${bannerId}`}>Booking.com</a>
                         </ins>
                       </div>
-                      <div className={`deals ${mobileDeals ? "" : "hide"}`}>
+                      <div className={`bookingBanner ${showAside ? "" : "hide"}`}>
                         <ins
                           className="bookingaff"
-                          data-aid="1779293"
-                          data-target_aid="1779293"
-                          data-prod="dfl2"
+                          data-aid="1779292"
+                          data-target_aid="1779292"
+                          data-prod="sbp"
+                          data-width="700"
+                          data-height="250"
+                          data-lang="es"
+                          data-currency="USD"
+                          data-df_num_properties="3"
+                        >
+                          <a href="//www.booking.com?aid=1779292">Booking.com</a>
+                        </ins>
+                      </div>
+                      <div className={`bookingBanner ${mobileDeals ? "" : "hide"}`}>
+                        <ins
+                          className="bookingaff"
+                          data-aid="1779291"
+                          data-target_aid="1779291"
+                          data-prod="nsb"
                           data-width="100%"
                           data-height="auto"
                           data-lang="es"
                           data-currency="USD"
                           data-df_num_properties="3"
                         >
-                          <a href="//www.booking.com?aid=1779293">Booking.com</a>
+                          <a href="//www.booking.com?aid=1779291">Booking.com</a>
                         </ins>
+                      </div>
+                      <div className={`deals ${mobileDeals ? "" : "hide"}`}>
+                        <a
+                          target="_blank"
+                          href="https://shareasale.com/r.cfm?b=695583&amp;u=2080537&amp;m=32794&amp;urllink=&amp;afftrack="
+                        >
+                          <img
+                            src="https://static.shareasale.com/image/32794/plantillas-banners-web_afiliados--300_00.jpg"
+                            border="0"
+                            alt="Parque Xcaret una exposicion de colores, sabores y tradiciones mexicanas. Atracciones para toda la familia. Cancun, México"
+                          />
+                        </a>
                       </div>
                       <Footer html={footnoteHTML} theme={this.state.theme} />
 
@@ -225,9 +249,16 @@ class Layout extends React.Component {
                           flex: 2;
                         }
 
+                        .bookingBanner {
+                          margin: 0 auto;
+                          max-width: 300px;
+                        }
+
                         aside {
                           flex: 1;
                           padding: ${theme.space.inset.default};
+                          display: flex;
+                          justify-content: center;
                         }
 
                         .hide {
@@ -285,6 +316,10 @@ class Layout extends React.Component {
                               theme.space.default
                             } * 2)`};
                           }
+
+                          .bookingBanner {
+                            max-width: 570px;
+                          }
                         }
 
                         @from-width desktop {
@@ -298,6 +333,11 @@ class Layout extends React.Component {
                           .banner {
                             max-width: 728px;
                             height: 90px;
+                          }
+
+                          .bookingBanner {
+                            max-width: 700px;
+                            height: 250px;
                           }
                         }
 
