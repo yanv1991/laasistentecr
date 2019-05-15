@@ -5,12 +5,12 @@ cover: photo-1465070845512-2b2dbdc6df66.jpg
 author: Fabiola Zuñiga
 ---
 
-![piramide](./photo-1465070845512-2b2dbdc6df66.jpg)
+![Westin Resort Cancun](./photo-1465070845512-2b2dbdc6df66.jpg)
 
 Estos son algunos de los tips que te pueden ayudar cuando planees visitar **Cancún**, espero te puedan ayudar en tus próximas vacaciones.
 
 ### 1. Transporte desde el Aeropuerto de Cancun a Zona Hotelera
-Lo primero que debes considerar para viajar a Cancún, es que no existe una ruta de transporte público desde el aeropuerto a la zona hotelera y la aplicación **Uber** es prohibida para este lugar turístico, por lo que te recomiendo hospedarte en los últimos kilómetro de zona hotelera que son los que están más cerca del aeropuerto para que el costo de servicio de taxi no sea tan alto, en mi caso me hospede en el <a href="http://bit.ly/2Huc0p5" target="_blank">**Hotel Fiesta Americana La Condesa**</a> y el taxi me costó 25 dólares.
+Lo primero que debes considerar para viajar a Cancún, es que no existe una ruta de transporte público desde el aeropuerto a la zona hotelera y la aplicación **Uber** es prohibida para este lugar turístico, por lo que te recomiendo hospedarte en los últimos kilómetro de zona hotelera que son los que están más cerca del aeropuerto para que el costo de servicio de taxi no sea tan alto, en mi caso me hospede en el <a href="http://bit.ly/2Huc0p5" target="_blank">**Hotel Fiesta Americana La Condesa**</a> y el taxi me costó 25 dólares. Por cierto, si aún no tienes tus tiquetes aéreos a Cancún, entra a este <a href="http://bit.ly/30m6LAI" target="_blank">**enlace**</a> para que aproveches esta oferta.
 
 ### 2. Hospedaje todo incluido.
 Usualmente viene la pregunta si hospedarse en un hotel **todo incluido** o no? En las dos ocasiones que he estado por allá me hospede en un servicio todo incluido y la verdad vale cada centavo que pagas por este servicio, ya que la atención y los alimentos son simplemente excelentes. Por lo que si te quieres ir a relajar algunos días y otros irte de tour; yo si lo recomiendo como de las mejores experiencias. Eso sí debes saber que casi todos los tours son de un día, por lo que si estás planeando estar fuera del hotel la mayor parte del tiempo, no tiene mucho sentido gastar con el servicio todo incluido, ya que no vas aprovechar por lo que pagaste, acá te dejo un enlace del sitio <a href="http://bit.ly/2VYHltB" target="_blank">**booking.com**</a>, que te recomiendo, ya que puedes encontrar buenas ofertas en hospedaje con múltiples beneficios como cancelación gratuita y sin pago por adelantado.
