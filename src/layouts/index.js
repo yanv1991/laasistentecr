@@ -82,6 +82,7 @@ class Layout extends React.Component {
   };
 
   handleOnClick = () => {
+    dataLayer.push({'event': 'subscribe'}); // eslint-disable-line
     this.setState(prevState => {
       return { ...prevState, isSubscribeOpen: !prevState.isSubscribeOpen };
     });

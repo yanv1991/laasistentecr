@@ -51,7 +51,7 @@ const Post = props => {
               <div className="container">
                 <Share post={post} theme={theme} />
                 <div className="subscribe">
-                  <Button onClick={toggleSubscribe} type="primary">
+                  <Button id="subscribeButton" onClick={toggleSubscribe} type="primary">
                     SUSCRIBIRTE
                   </Button>
                 </div>
