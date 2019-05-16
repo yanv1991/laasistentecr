@@ -33,8 +33,30 @@ export default class HTML extends React.Component {
                 "(window.adsbygoogle = window.adsbygoogle || []).push({google_ad_client: 'ca-pub-9017701188036910', enable_page_level_ads: true});"
             }}
           />
+          <script
+            defer
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: `
+              function createDL(t){var e=[],s=[];return e.push=function(){return this.length>=t?!!s[1]&&(this.splice(s[0],s[1]),s.splice(1,1),this.push.apply(this,arguments)):(this.constructor.prototype.push.apply(this,arguments),s.push(arguments.length),this)},e}!function(t,e,s,n,r){t[n]=t[n]||createDL(3),t[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var a=e.getElementsByTagName(s)[0],i=e.createElement(s);i.async=!0,i.src="https://www.googletagmanager.com/gtm.js?id=GTM-PPDMNV5",a.parentNode.insertBefore(i,a)}(window,document,"script","dataLayer");
+              `
+            }}
+          />
         </head>
         <body {...this.props.bodyAttributes}>
+          <noscript
+            dangerouslySetInnerHTML={{
+              __html: `
+              <iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-PPDMNV5"
+                height="0"
+                width="0"
+                style="display:none;visibility:hidden"
+              >
+              </iframe>
+              `
+            }}
+          />
           {this.props.preBodyComponents}
           <div key={`body`} id="___gatsby" dangerouslySetInnerHTML={{ __html: this.props.body }} />
           {this.props.postBodyComponents}
