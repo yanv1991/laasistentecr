@@ -123,19 +123,19 @@ class Layout extends React.Component {
           }
         `}
         render={data => {
-          const {
-            children,
-            pageContext: { slug }
-          } = this.props;
+          const { children, pageContext, location: { pathname }} = this.props;
           const {
             footnote: { html: footnoteHTML },
             pages: { edges: pages }
           } = data;
+          const { slug, source } = pageContext;
           const { screenWidth, theme } = this.state;
           const isOfertas = slug === "/ofertas/";
           const isDesktop = screenWidth >= 1024;
+          const isSubscribe = "/subscribe/" === pathname && !isDesktop;
           const showAside = isOfertas && isDesktop;
           const mobileDeals = isOfertas && !isDesktop;
+          const isPost = source === "posts" && isDesktop;
           let bannerId = 1779274;
 
           if (isDesktop) {
@@ -166,9 +166,17 @@ class Layout extends React.Component {
                         handleClickSubscription={this.handleOnClick}
                       />
                       <div className="mainContainer">
-                        <aside className={`${showAside ? "" : "hide"}`} />
+                        <aside className={`${showAside || isPost ? "" : "hide"}`}>
+                          <iframe
+                            scrolling="no"
+                            width=""
+                            height="475"
+                            frameBorder="0"
+                            src="//www.travelpayouts.com/widgets/d1b92f2b86738762bdbe044a5ddce7bc.html?v=1702"
+                          />
+                        </aside>
                         <main>{children}</main>
-                        <aside className={`${showAside ? "" : "hide"}`}>
+                        <aside className={`${showAside || isPost ? "" : "hide"}`}>
                           <a
                             target="_blank"
                             href="https://shareasale.com/r.cfm?b=845324&amp;u=2080537&amp;m=32794&amp;urllink=&amp;afftrack="
@@ -209,20 +217,14 @@ class Layout extends React.Component {
                           <a href="//www.booking.com?aid=1779292">Booking.com</a>
                         </ins>
                       </div>
-                      <div className={`bookingBanner ${mobileDeals ? "" : "hide"}`}>
-                        <ins
-                          className="bookingaff"
-                          data-aid="1779291"
-                          data-target_aid="1779291"
-                          data-prod="nsb"
-                          data-width="100%"
-                          data-height="auto"
-                          data-lang="es"
-                          data-currency="USD"
-                          data-df_num_properties="3"
-                        >
-                          <a href="//www.booking.com?aid=1779291">Booking.com</a>
-                        </ins>
+                      <div className={`bookingBanner ${mobileDeals || isSubscribe ? "" : "hide"}`}>
+                        <iframe
+                          scrolling="no"
+                          width=""
+                          height="475"
+                          frameBorder="0"
+                          src="//www.travelpayouts.com/widgets/d1b92f2b86738762bdbe044a5ddce7bc.html?v=1702"
+                        />
                       </div>
                       <div className={`deals ${mobileDeals ? "" : "hide"}`}>
                         <a
@@ -259,10 +261,6 @@ class Layout extends React.Component {
                           padding: ${theme.space.inset.default};
                           display: flex;
                           justify-content: center;
-                        }
-
-                        .hide {
-                          display: none;
                         }
 
                         .feedback {
@@ -318,7 +316,8 @@ class Layout extends React.Component {
                           }
 
                           .bookingBanner {
-                            max-width: 570px;
+                            display: flex;
+                            justify-content: center;
                           }
                         }
 
@@ -343,6 +342,10 @@ class Layout extends React.Component {
 
                         .deals {
                           height: auto;
+                        }
+
+                        .hide {
+                          display: none;
                         }
                       `}</style>
                       <style jsx global>{`
