@@ -132,10 +132,11 @@ class Layout extends React.Component {
           const { screenWidth, theme } = this.state;
           const isOfertas = slug === "/ofertas/";
           const isDesktop = screenWidth >= 1024;
-          const isSubscribe = "/subscribe/" === pathname && !isDesktop;
           const showAside = isOfertas && isDesktop;
           const mobileDeals = isOfertas && !isDesktop;
           const isPost = source === "posts" && isDesktop;
+          const parsedPath = pathname.replace(/\//g, "");
+          const isSubscribe = "subscribe" === parsedPath && !isDesktop;
           let bannerId = 1779274;
 
           if (isDesktop) {
@@ -156,7 +157,7 @@ class Layout extends React.Component {
                   >
                     <React.Fragment>
                       <NotificationContainer />
-                      {this.props.location.pathname !== "/subscribe" && <Sticky />}
+                      {parsedPath !== "subscribe" && <Sticky />}
                       <BackTop />
                       <Header
                         path={this.props.location.pathname}
