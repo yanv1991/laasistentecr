@@ -292,15 +292,5 @@ module.exports = {
       }
     },
     "gatsby-plugin-robots-txt"
-    /* {
-      resolve: `gatsby-plugin-google-tagmanager`,
-      options: {
-        id: "GTM-PPDMNV5",
-
-        // Include GTM in development.
-        // Defaults to false meaning GTM will only be loaded in production.
-        includeInDevelopment: true
-      }
-    } */
   ]
 };
