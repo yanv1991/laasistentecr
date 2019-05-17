@@ -8,6 +8,8 @@ Encuentra las mejores ofertas en vuelos y hospedaje aqui:
 
 Ofertas en los siguientes destinos (ida y vuelta):
 
+* <a href="http://bit.ly/2JJmNyE" target="_blank">Los Angeles, US:  $268</a>
+* <a href="http://bit.ly/2EfCPg0" target="_blank">Zurich, SZ:  $408</a>
 * <a href="http://bit.ly/2Ht97oC" target="_blank">Guatemala $125</a>
 * <a href="http://bit.ly/30k40jb" target="_blank">Los Cabos, MX $235</a>
 * <a href="http://bit.ly/2Hq1HT6" target="_blank">Lima,PE $328</a>
@@ -19,6 +21,6 @@ Ofertas en los siguientes destinos (ida y vuelta):
 * <a href="http://bit.ly/2Hon87b" target="_blank">Londres,ENG $515</a>
 * <a href="http://bit.ly/2Ea7zPs" target="_blank">Moscú,RU $821</a>
 
-![los andes](./photo-1465070845512-2b2dbdc6df66.jpeg)
+![las vegas](./photo-1465070845512-2b2dbdc6df66.png)
 
 Estas ofertas son por tiempo limitado, apresurate antes de que se acaben o expiren.
