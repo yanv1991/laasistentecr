@@ -25,7 +25,7 @@ export default class Article extends React.Component {
             return (
               <article className="article">
                 {children}
-                {
+                {/*
                   <React.Fragment>
                     {!HIDE_SEARCH_LIST.includes(parsedSlug) && (
                       <div className="embed-container">
@@ -38,8 +38,8 @@ export default class Article extends React.Component {
                         />
                       </div>
                     )}
-                  </React.Fragment>
-                }
+                  </React.Fragment
+                  */}
               </article>
             );
           }}
