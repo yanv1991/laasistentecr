@@ -1,6 +1,6 @@
 ---
 title: Cómo planear mi viaje a Cancún
-category: "México"
+category: "Mexico"
 cover: photo-1465070845512-2b2dbdc6df66.jpeg
 author: Fabiola Zúñiga
 ---
