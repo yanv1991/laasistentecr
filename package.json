@@ -17,6 +17,7 @@
     "gatsby-plugin-mailchimp": "^5.0.0",
     "gatsby-plugin-manifest": "^2.0.2",
     "gatsby-plugin-netlify": "^2.0.0",
+    "gatsby-plugin-no-sourcemaps": "^2.0.2",
     "gatsby-plugin-offline": "^2.0.6",
     "gatsby-plugin-react-css-modules": "^2.0.9",
     "gatsby-plugin-react-helmet": "^3.0.0",

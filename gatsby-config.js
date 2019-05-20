@@ -291,6 +291,9 @@ module.exports = {
           "https://gmail.us20.list-manage.com/subscribe/post?u=45518dc629d031fe22c96f13d&amp;id=a6ca913ef6" // see instructions section below
       }
     },
-    "gatsby-plugin-robots-txt"
+    "gatsby-plugin-robots-txt",
+    {
+      resolve: "gatsby-plugin-no-sourcemaps"
+    }
   ]
 };
