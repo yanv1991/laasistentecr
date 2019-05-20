@@ -8,6 +8,8 @@ Encuentra las mejores ofertas en vuelos y hospedaje aqui:
 
 Ofertas en los siguientes destinos (ida y vuelta):
 
+* <a href="http://bit.ly/2YAWTkL" target="_blank">Montreal, CA: $338</a>
+* <a href="http://bit.ly/2VLc1PH" target="_blank">Alaska:  $508</a>
 * <a href="http://bit.ly/2WTp5in" target="_blank">Marsella, FR: $327</a>
 * <a href="http://bit.ly/2JNkESB" target="_blank">Vancouver, CA:  $285</a>
 * <a href="http://bit.ly/2Yw2VTC" target="_blank">Madrid, ESP $384</a>
