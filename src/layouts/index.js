@@ -123,7 +123,11 @@ class Layout extends React.Component {
           }
         `}
         render={data => {
-          const { children, pageContext, location: { pathname }} = this.props;
+          const {
+            children,
+            pageContext,
+            location: { pathname }
+          } = this.props;
           const {
             footnote: { html: footnoteHTML },
             pages: { edges: pages }
@@ -216,19 +220,19 @@ class Layout extends React.Component {
                           <a href="//www.booking.com?aid=1779292">Booking.com</a>
                         </ins> **/}
                         {isMobile ? (
-                          <a target="_blank" href="http://bit.ly/2VCCp9A">
+                          <a target="_blank" href="http://bit.ly/2WXnecv">
                             <img
-                              src="https://c112.travelpayouts.com/content?promo_id=3340&shmarker=225301&type=init"
-                              alt="ES - 600x300"
-                              width="600"
-                              height="300"
+                              src="https://c103.travelpayouts.com/content?promo_id=2871&shmarker=225301&type=init"
+                              alt="300*250 spanish"
+                              width="300"
+                              height="250"
                             />
                           </a>
                         ) : (
-                          <a target="_blank" href="http://bit.ly/2VCCp9A">
+                          <a target="_blank" href="http://bit.ly/2WXnecv">
                             <img
-                              src="https://c112.travelpayouts.com/content?promo_id=3341&shmarker=225301&type=init"
-                              alt="ES - 728x90"
+                              src="https://c103.travelpayouts.com/content?promo_id=2872&shmarker=225301&type=init"
+                              alt="728*90 spanish"
                               width="728"
                               height="90"
                             />
@@ -272,7 +276,7 @@ class Layout extends React.Component {
 
                           img {
                             width: 100%;
-                            max-height: 160px;
+                            max-height: 250px;
                           }
                         }
 
