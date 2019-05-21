@@ -132,6 +132,7 @@ class Layout extends React.Component {
           const { screenWidth, theme } = this.state;
           const isOfertas = slug === "/ofertas/";
           const isDesktop = screenWidth >= 1024;
+          const isMobile = screenWidth <= 569;
           const showAside = isOfertas && isDesktop;
           const mobileDeals = isOfertas && !isDesktop;
           const isPost = source === "posts" && isDesktop;
@@ -178,14 +179,11 @@ class Layout extends React.Component {
                         </aside>
                         <main>{children}</main>
                         <aside className={`${showAside || isPost ? "" : "hide"}`}>
-                          <a
-                            target="_blank"
-                            href="https://shareasale.com/r.cfm?b=845324&amp;u=2080537&amp;m=32794&amp;urllink=&amp;afftrack="
-                          >
+                          <a target="_blank" href="http://bit.ly/2YynsHg">
                             <img
-                              src="https://static.shareasale.com/image/32794/a_01.jpg"
+                              src="https://static.shareasale.com/image/32794/plantillas-banners-web_afiliados--160_00.jpg"
                               border="0"
-                              alt="Parque Xoximilco, paga 4 adultos y el 5to es gratis. Musica en vivo, tequila y más. Cancun, Riviera Maya."
+                              alt="Parque Xcaret una exposicion de colores, sabores y tradiciones mexicanas. Atracciones para toda la familia. Cancun, México"
                             />
                           </a>
                         </aside>
@@ -203,8 +201,8 @@ class Layout extends React.Component {
                           <a href={`//www.booking.com?aid=${bannerId}`}>Booking.com</a>
                         </ins>
                       </div>
-                      <div className={`bookingBanner ${showAside ? "" : "hide"}`}>
-                        <ins
+                      <div className={`bookingBanner`}>
+                        {/** <ins
                           className="bookingaff"
                           data-aid="1779292"
                           data-target_aid="1779292"
@@ -216,7 +214,26 @@ class Layout extends React.Component {
                           data-df_num_properties="3"
                         >
                           <a href="//www.booking.com?aid=1779292">Booking.com</a>
-                        </ins>
+                        </ins> **/}
+                        {isMobile ? (
+                          <a target="_blank" href="http://bit.ly/2VCCp9A">
+                            <img
+                              src="https://c112.travelpayouts.com/content?promo_id=3340&shmarker=225301&type=init"
+                              alt="ES - 600x300"
+                              width="600"
+                              height="300"
+                            />
+                          </a>
+                        ) : (
+                          <a target="_blank" href="http://bit.ly/2VCCp9A">
+                            <img
+                              src="https://c112.travelpayouts.com/content?promo_id=3341&shmarker=225301&type=init"
+                              alt="ES - 728x90"
+                              width="728"
+                              height="90"
+                            />
+                          </a>
+                        )}
                       </div>
                       <div className={`bookingBanner ${mobileDeals || isSubscribe ? "" : "hide"}`}>
                         <iframe
@@ -228,10 +245,7 @@ class Layout extends React.Component {
                         />
                       </div>
                       <div className={`deals ${mobileDeals ? "" : "hide"}`}>
-                        <a
-                          target="_blank"
-                          href="https://shareasale.com/r.cfm?b=695583&amp;u=2080537&amp;m=32794&amp;urllink=&amp;afftrack="
-                        >
+                        <a target="_blank" href="http://bit.ly/2Jwzw8q">
                           <img
                             src="https://static.shareasale.com/image/32794/plantillas-banners-web_afiliados--300_00.jpg"
                             border="0"
@@ -255,6 +269,11 @@ class Layout extends React.Component {
                         .bookingBanner {
                           margin: 0 auto;
                           max-width: 300px;
+
+                          img {
+                            width: 100%;
+                            max-height: 160px;
+                          }
                         }
 
                         aside {
@@ -319,6 +338,7 @@ class Layout extends React.Component {
                           .bookingBanner {
                             display: flex;
                             justify-content: center;
+                            max-width: 600px;
                           }
                         }
 
@@ -336,8 +356,12 @@ class Layout extends React.Component {
                           }
 
                           .bookingBanner {
-                            max-width: 700px;
-                            height: 250px;
+                            max-width: 728px;
+                            height: 100px;
+
+                            img {
+                              max-height: 300px;
+                            }
                           }
                         }
 
