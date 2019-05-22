@@ -13,6 +13,10 @@ export default class HTML extends React.Component {
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="#D0E0D8" />
           <meta name="apple-mobile-web-app-title" content="Lazywill" />
+          <meta
+            name="tradetracker-site-verification"
+            content="73fa96d35a4fb95a63e94f3e1e75ecfdbe6d282a"
+          />
           <link rel="apple-touch-icon" href="/icons/apple-icon-57x57.png" sizes="57x57" />
           <link rel="apple-touch-icon" href="/icons/apple-icon-60x60.png" sizes="60x60" />
           <link rel="apple-touch-icon" href="/icons/apple-icon-72x72.png" sizes="72x72" />
@@ -50,37 +54,6 @@ export default class HTML extends React.Component {
             }}
           />
         </body>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `var el=document.getElementsByTagName("body")[0],comment=document.createComment("Begin TradeTracker SuperTag Code");el.appendChild(comment);`
-          }}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            var _TradeTrackerTagOptions = {
-                t: 'a',
-                s: '350616',
-                chk: '74d6a58f5ab56ffcd8d831525781d90c',
-                overrideOptions: {}
-            };
-
-            (function() {
-                var tt = document.createElement('script'),
-                    s = document.getElementsByTagName('script')[0];
-
-                tt.setAttribute('type', 'text/javascript');
-                tt.setAttribute('src', (document.location.protocol == 'https:' ? 'https' : 'http') + '://tm.tradetracker.net/tag?t=' + _TradeTrackerTagOptions.t + '&amp;s=' + _TradeTrackerTagOptions.s + '&amp;chk=' + _TradeTrackerTagOptions.chk);
-                s.parentNode.insertBefore(tt, s);
-            })();
-            `
-          }}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `var el=document.getElementsByTagName("body")[0],comment=document.createComment("End TradeTracker SuperTag Code");el.appendChild(comment);`
-          }}
-        />
       </html>
     );
   }
