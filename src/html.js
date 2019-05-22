@@ -50,6 +50,37 @@ export default class HTML extends React.Component {
             }}
           />
         </body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `var el=document.getElementsByTagName("body")[0],comment=document.createComment("Begin TradeTracker SuperTag Code");el.appendChild(comment);`
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            var _TradeTrackerTagOptions = {
+                t: 'a',
+                s: '350616',
+                chk: '74d6a58f5ab56ffcd8d831525781d90c',
+                overrideOptions: {}
+            };
+
+            (function() {
+                var tt = document.createElement('script'),
+                    s = document.getElementsByTagName('script')[0];
+
+                tt.setAttribute('type', 'text/javascript');
+                tt.setAttribute('src', (document.location.protocol == 'https:' ? 'https' : 'http') + '://tm.tradetracker.net/tag?t=' + _TradeTrackerTagOptions.t + '&amp;s=' + _TradeTrackerTagOptions.s + '&amp;chk=' + _TradeTrackerTagOptions.chk);
+                s.parentNode.insertBefore(tt, s);
+            })();
+            `
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `var el=document.getElementsByTagName("body")[0],comment=document.createComment("End TradeTracker SuperTag Code");el.appendChild(comment);`
+          }}
+        />
       </html>
     );
   }
