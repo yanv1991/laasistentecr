@@ -8,6 +8,8 @@ Encuentra las mejores ofertas en vuelos y hospedaje aqui:
 
 Ofertas en los siguientes destinos (ida y vuelta):
 
+* <a href="http://bit.ly/2Elm2s0" target="_blank">San Juan, PR: $364</a>
+* <a href="http://bit.ly/2VRVKbH" target="_blank">Santo Domingo, Rep. Dom:  $390</a>
 * <a href="http://bit.ly/2WQZGWy" target="_blank">Dallas, TX: $300</a>
 * <a href="http://bit.ly/2LYdwFP" target="_blank">Toronto, CA:  $319</a>
 * <a href="http://bit.ly/2YAWTkL" target="_blank">Montreal, CA: $338</a>
