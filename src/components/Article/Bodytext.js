@@ -62,6 +62,13 @@ const Bodytext = props => {
             padding: 0.1em 0.3em 0.2em;
             border-radius: 0.1em;
           }
+          :global(table) {
+            border-collapse: collapse;
+          }
+          :global(th, td) {
+            border: 1px solid #000000;
+            padding: 5px 4px;
+          }
         }
 
         @keyframes bodytextEntry {
