@@ -69,6 +69,15 @@ const Bodytext = props => {
             border: 1px solid #000000;
             padding: 5px 4px;
           }
+          :global(.tableWrapper) {
+            width: 90vw;
+            overflow-x: auto;
+
+            @media(min-width: 568px){
+              width: 100%;
+              overflow-x: visible;
+            }
+          }
         }
 
         @keyframes bodytextEntry {
