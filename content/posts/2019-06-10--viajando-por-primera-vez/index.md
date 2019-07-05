@@ -34,6 +34,8 @@ Adicionalmente, según la **NORMATIVA AVSEC-002 (LAGS)** no es permitido los lí
 ###2. Dimensiones de la maleta de mano
 Hoy en día no existe un tamaño ni un peso estándar para el equipaje de mano aceptado por todas las compañías aéreas. Por lo que quise hacer una guía rápida en la que detallamos las medidas del equipaje de mano de la mayoría de aerolíneas que vuelan desde Costa Rica.
 
+<div class="tableWrapper">
+
 | **Aerolínea**    | **Dimensión** | **Peso** |
 | :------             | :---  | :----- |
 | Spirit           | 45 X 35 X 20 cm | NA |
@@ -62,6 +64,8 @@ Hoy en día no existe un tamaño ni un peso estándar para el equipaje de mano a
 | Albatros | 55 x 35 x 23 cm | 10kg |
 | Condor | Tiene derecho a un artículo personal de (40 x 30 x 10 cm) y una maleta de mano (55 x 40 x 20 cm) |   |
 | Air transat | 23 x 40 x 51cm | 10kg |
+
+</div>
 
 ### 3. Que no puedes olvidar
 
