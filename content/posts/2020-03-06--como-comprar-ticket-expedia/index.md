@@ -15,7 +15,7 @@ Ingresar al link <a href="https://www.expedia.com" target="_blank">**(www.expedi
 #### Paso 2:
  Luego debes ir a la opción de **“Vuelos”**, ahí debes completar la opción de **Origen, Llegada a, fecha de salida, fecha de regreso y cantidad de personas.** Para finalmente darle clic en el botón de **Buscar**.
 
-![expedia busqueda vuelos](./photo-1465070845512-2b2dbdc6df67.png)
+![expedia busqueda vuelos](./photo-1465070845512-2b2dbdc6df67.jpg)
 
 #### Paso 3:
 Elegir la opción que más se adecue a tus preferencias de precio, aerolínea, escala y horario.
@@ -39,6 +39,8 @@ Esos fueron los simples pasos para comprar un tiquete en Expedia, así viajeros 
 Desde ya les deseo un buen viaje!
 
 **Atentamente:**
+</br>
 La Asistente Cr
+</br>
 Tú asistente de viaje
 
