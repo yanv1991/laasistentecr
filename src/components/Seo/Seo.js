@@ -37,7 +37,7 @@ const Seo = props => {
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={category || description} />
-      <meta property="og:image" content={contentImage || image} />
+      <meta property="og:image" content={`https://laasistentecr.com${contentImage || image}`} />
       <meta property="og:image:width" content="300" />
       <meta property="og:image:height" content="147" />
       <meta property="og:type" content="website" />
