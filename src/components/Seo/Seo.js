@@ -38,8 +38,8 @@ const Seo = props => {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={category || description} />
       <meta property="og:image" content={`https://laasistentecr.com${contentImage || image}`} />
-      <meta property="og:image:width" content="420" />
-      <meta property="og:image:height" content="206" />
+      <meta property="og:image:width" content="715" />
+      <meta property="og:image:height" content="351" />
       <meta property="og:type" content="website" />
       <meta property="fb:app_id" content={facebook.appId} />
       {/* Twitter Card tags */}
