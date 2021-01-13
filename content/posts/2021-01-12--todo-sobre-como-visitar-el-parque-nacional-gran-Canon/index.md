@@ -26,7 +26,7 @@ El clima puede ser inesperado por lo que te sugiero andar preparado, tanto para 
 
 La lista es infinita y todo de acuerdo a tus gustos y preferencias. Porque puedes hacer rafting, vuelo en helicóptero, paseo en mulas, trails hasta el río,  en fin muchas actividades. Por lo que lo voy a limitar a las básicas y más visitadas  de cada borde del parque.
 
-<a href="https://grandcanyonwest.com/" target="_blank">**Borde Oeste (Tribu Hualapai) **</a>
+<a href="https://grandcanyonwest.com/" target="_blank">**Borde Oeste (Tribu Hualapai)**</a>
 
 Skywalk  
 Havasu Falls
@@ -69,16 +69,16 @@ Siguiendo con el viaje, al día siguiente partimos para el Gran Cañón la entra
 
 Además que lo que NO puedes pero JAMÁS dejar de hacer es, ver el amanecer en el mather point y un atardecer en Yaki point. Así que revisa en google a que hora amanece para la fecha en específico que vas a visitar y levántate temprano. Las ventajas es que casi no hay personas a esa hora y disfrutas un montón la mañana para recorrer el parque. Luego para el atardecer, una o dos horas antes busca tu espacio donde nadie te obstruya la vista. Lleva snacks, bebidas y un buen abrigo para esperar el atardecer y te aseguro que nunca te vas arrepentir de la espera.
 
-Para recorrer el borde sur se requiere al menos dos días les voy a dejar los mapas para que planeen los puntos y los trails que quieran visitar. <a href="https://www.nps.gov/grca/learn/news/newspaper.htm#CP_JUMP_839064" target="_blank">**Página de guías**</a>  
+Para recorrer el borde sur se requiere al menos dos días les voy a dejar los mapas para que planeen los puntos y los trails que quieran visitar <a href="https://www.nps.gov/grca/learn/news/newspaper.htm#CP_JUMP_839064" target="_blank">**Página de guías**</a>  
 
 <a href="https://www.nps.gov/grca/learn/news/upload/sr-pocket-map.pdf" target="_blank">**Mapa del borde sur**</a>  
 
-< href="https://www.nps.gov/grca/learn/news/upload/nr-pocket-map.pdf" target="_blank">**Mapa del borde norte**</a>
+<a href="https://www.nps.gov/grca/learn/news/upload/nr-pocket-map.pdf" target="_blank">**Mapa del borde norte**</a>
 
 
 Para visitar los diferentes puntos, puedes hacerlo en tu vehículo, bicicleta (se puede rentar), caminando y bus (servicio gratuito).
 
-Si deseas saber como funciona el servicio de bus te dejo acá el link < href="https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm" target="_blank">**Servicio de bus**</a> .
+Si deseas saber como funciona el servicio de bus te dejo acá el link <a href="https://www.nps.gov/grca/planyourvisit/shuttle-buses.htm" target="_blank">**Servicio de bus**</a> .
 
 De manera resumida, les comento que las rutas están marcadas en los mapas por colores así te guías para saber que bus debes abordar de acuerdo los puntos que quieras visitar. 
 
