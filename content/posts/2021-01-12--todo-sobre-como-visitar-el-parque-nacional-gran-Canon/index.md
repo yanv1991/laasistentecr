@@ -28,34 +28,34 @@ La lista es infinita y todo de acuerdo a tus gustos y preferencias. Porque puede
 
 <a href="https://grandcanyonwest.com/" target="_blank">**Borde Oeste (Tribu Hualapai)**</a>
 
-Skywalk  
+Skywalk </br >
 Havasu Falls
 
 <a href="https://navajonationparks.org/guided-tour-operators/antelope-canyon-tour-operators/" target="_blank">**Borde Este (Indios Navajo)**</a>
 
-Antílope cañón
-Puente Navajo
-Curva de la Herradura
+Antílope cañón  </br >
+Puente Navajo  </br >
+Curva de la Herradura  </br >
 
 <a href="https://www.nps.gov/grca/planyourvisit/basicinfo.htm#CP_JUMP_2627738" target="_blank">**Borde Norte**</a>
 
-Bright Angel Point
-North Rim Visitor Center
-Coconino Overlook
-North Kaibab Trail
-Roaring Springs Canyon
+Bright Angel Point  </br >
+North Rim Visitor Center  </br >
+Coconino Overlook  </br >
+North Kaibab Trail  </br >
+Roaring Springs Canyon  </br >
 
 <a href="https://www.nps.gov/grca/planyourvisit/basicinfo.htm#CP_JUMP_2627738" target="_blank">**Borde Sur**</a>
 
-Mather Point
-Hopi Point
-Yaki point
-Mohave Point
-Maricopa Point
-Rim Trial
-Torre de Vigilancia Desert View
-Grand Canyon Village
-Grand Canyon Railway
+Mather Point </br > 
+Hopi Point  </br >
+Yaki point  </br >
+Mohave Point  </br >
+Maricopa Point  </br >
+Rim Trial  </br >
+Torre de Vigilancia Desert View  </br >
+Grand Canyon Village  </br >
+Grand Canyon Railway  </br >
 
 # 4. Mi Ruta visitando el Borde Sur (South Rim)
 
